@@ -1,6 +1,7 @@
 ---
-title: NodeJS
-slug: nodejs
+title: Nodejs Questions
+topics: ["Tech", "nodejs"]
+exceprt: 'NodeJS receives multiple client requests and places them into `EventQueue`.'
 date: 2019-03-13 20:18:42
 ---
 

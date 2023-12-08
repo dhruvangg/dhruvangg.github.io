@@ -91,6 +91,8 @@ out
 .nuxt
 dist
 
+_site/*
+
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
@@ -128,3 +130,15 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+_site/index.html
+_site/index.html
+_site/blog/index.html
+_site/blog/1/index.html
+_site/blog/2/index.html
+_site/posts/first-blog/index.html
+_site/posts/JavaScript/index.html
+_site/posts/javascript-interview-questions/index.html
+_site/posts/mongodb/index.html
+_site/posts/NodeJS/index.html
+_site/posts/post-1/index.html
+_site/posts/React/index.html

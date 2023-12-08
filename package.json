@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve  && npx tailwindcss -i styles/main.css -c tailwind.config.js -o _site/styles/main.css --watch",
+    "start": "npx @11ty/eleventy --serve",
     "debug": "set DEBUG=Eleventy* && npx @11ty/eleventy --serve",
     "watch": "npx @11ty/eleventy --watch"
   },

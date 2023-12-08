@@ -2,30 +2,88 @@
 layout: layout.html
 ---
 
+<section class='max-w-3xl mx-auto px-4 mt-12 prose prose-xl'>
+    <h1>Hello, I'm Dhruvang Gajjar</h1>
+    <h4>A JavaScript Developer and Mentor.</h4>
 
-<div class="container">
-    <div class="grid grid-cols-3 gap-8">
-        <div class="col-span-2">
-            <div class="grid grid-cols-2 gap-8">
-                <div class="bg-gray-200 h-96 rounded-xl"></div>
-                <div class="bg-gray-200 h-96 rounded-xl"></div>  
-                <div class="bg-gray-200 h-96 rounded-xl"></div>
-                <div class="bg-gray-200 h-96 rounded-xl"></div>        
-            </div>
-        </div>
-        <div class="h-96 rounded-xl p-2">
-            <h3 class="text-2xl font-bold">Categories</h3>
-            <ul class="my-8 p-4 bg-gray-200">
-                <li class="text-xl font-semibold border-b-2 border-gray-700">Web dev</li>
-                <li class="text-xl font-semibold border-b-2 border-gray-700">System Design</li>
-                <li class="text-xl font-semibold border-b-2 border-gray-700">React</li>
-                <li class="text-xl font-semibold border-b-2 border-gray-700">JavaScript</li>
-            </ul>
-        </div>
+    <p>I've started my career as a web developer over 6 years ago, and I've collaborated with great individuals to
+        create digital solutions for both corporate and consumer usage. I'm quietly confident, naturally curious, and
+        perpetually focusing on improving my skills one challenge at a time.</p>
+
+    <img src="{{ '/assets/img/separator.png' | url }}" alt="" class='my-20' />
+
+    <h3>Work Experience</h3>
+
+    <ul>
+        <li>
+            <p>JUL 2022 - Present<br /><span>Cygnet Infotech</span> <br />Senior Software Engineer</p>
+        </li>
+        <li>
+            <p>APR 2021 - JUN 2022<br /><span>Uplers Solutions</span> <br />Senior JavScript Developer</p>
+        </li>
+        <li>
+            <p>OCT 2017 - MAR 2021<br /><span>Uplers Solutions</span> <br />jQuery Developer</p>
+        </li>
+    </ul>
+
+    <img src="{{ '/assets/img/separator.png' | url }}" alt="" class='my-20' />
+
+    <h3>Awards and Achievements</h3>
+
+    <div>
+        <p>M001: MongoDb Basics by mongo university</p>
+        <p>JavaScript Algorithms and Data Structures by Freecodecamp</p>
+        <p>Responsive Web Design by Freecodecamp</p>
+        <p>Fundamentals of digital marketing by Google Digital Garage</p>
+        <p>Certified HubSpot CMS Developer by HubSpot</p>
     </div>
 
-    <h1 class="text-red-700 font-bold">Hwllo World</h1>
-    {% for post in collections.posts %}
-    <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-    {% endfor %}
-</div>
+    <img src="{{ '/assets/img/separator.png' | url }}" alt="" class='my-20' />
+
+    <h3>Skills</h3>
+
+    <ul>
+        <li>
+            <p><span class='font-semibold'>Web Technology</span> <br />JavaScript / ReactJS / NodeJS / ExpressJS /
+                jQuery / PHP / Laravel / HTML / CSS</p>
+        </li>
+        <li>
+            <p><span class='font-semibold'>Database and ORMs</span> <br />MongoDB / Mongoose / MySQL / Sequalize /
+                Firebase </p>
+        </li>
+        <li>
+            <p>
+                <span class='font-semibold'>Other Platforms</span>
+                <br />Hubspot / MailChimp / Zapier / Google Analytics / Google Tag Manager / Google Maps and Many
+                more...
+            </p>
+        </li>
+        <li>
+            <p><span class='font-semibold'>Non-technical</span> <br />Time Management / Problem-solving / Mentorship
+                / Adaptability / Teamwork</p>
+        </li>
+    </ul>
+
+    <img src="{{ '/assets/img/separator.png' | url }}" alt="" class='my-20' />
+
+    <div class="container">
+        <div class="grid grid-cols-3 gap-8">
+            <div class="col-span-2">
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="bg-gray-200 h-96 rounded-xl"></div>
+                    <div class="bg-gray-200 h-96 rounded-xl"></div>
+                    <div class="bg-gray-200 h-96 rounded-xl"></div>
+                    <div class="bg-gray-200 h-96 rounded-xl"></div>
+                </div>
+            </div>
+            <div class="h-96 rounded-xl p-2">
+                <h3 class="text-2xl font-bold">Categories</h3>
+                <ul class="my-8 p-4 bg-gray-200">
+                    <li class="text-xl font-semibold border-b-2 border-gray-700">Web dev</li>
+                    <li class="text-xl font-semibold border-b-2 border-gray-700">System Design</li>
+                    <li class="text-xl font-semibold border-b-2 border-gray-700">React</li>
+                    <li class="text-xl font-semibold border-b-2 border-gray-700">JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>

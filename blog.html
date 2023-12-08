@@ -1,24 +1,87 @@
 ---
 layout: layout.html
-pagination: 
+pagination:
     data: collections.posts
-    size: 3
+    size: 8
     alias: posts
 ---
 
-<h1>Blog posts with pagination</h1>
-
-<ol>
-    {% for post in posts %}
-        <li>
-            <a href="{{ post.url }}">
-                <h3>{{ post.data.title }}</h3>
-                <p>{{ post.data.exceprt }}</p>
-            </a>
-        </li>
-    {% endfor %}
-</ol>
-
-{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous page</a>{% endif %}
- | 
-{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next page</a>{% endif %}
+<div class="container my-16">
+    <div class="grid grid-cols-3 gap-8">
+        <div class="col-span-2">
+            <div class="grid grid-cols-2 gap-8">
+                {% for post in posts %}
+                <div class="h-full bg-gray-900 px-8 pt-10 pb-20 rounded-lg overflow-hidden text-center relative">
+                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-4">
+                        {% for topic in post.data.topics %}
+                        <span class="inline-block bg-gray-100 text-gray-900 rounded-full px-3 py-1 text-xs font-semibold mr-2">{{topic}}</span>
+                        {% endfor %}
+                    </h2>
+                    <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">{{ post.data.title }}</h1>
+                    <p class="leading-relaxed mb-3 text-gray-300">{{ post.data.exceprt }}</p>
+                    <a class="text-indigo-400 inline-flex items-center" href="{{ post.url }}">Learn More<svg
+                            class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg></a>
+                    <div
+                        class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-6 font-semibold text-sm text-white">
+                        <time datetime="2022-01-28T13:36:17.039Z">January 28, 2022</time>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if pagination.pageLinks.length > 1 %}
+            <div class="flex items-center justify-between border-t border-gray-200 mt-8 px-4 py-3 sm:px-6">
+                <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                    <div class="pb-6 sm:pb-0">
+                        <p class="text-md text-gray-500">
+                            Showing
+                            <span class="font-medium">
+                                {{ pagination.pageNumber | times: pagination.size | plus: 1 }}
+                            </span>
+                            to
+                            <span class="font-medium">
+                                {% if pagination.nextPageLink %}
+                                {{ pagination.pageNumber | times: pagination.size | plus: pagination.size }}
+                                {% else %}
+                                {{ collections.posts.length }}
+                                {% endif %}
+                            </span>
+                            of
+                            <span class="font-medium">{{ collections.posts.length }}</span>
+                            results
+                        </p>
+                    </div>
+                    <div>
+                        <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                            {% if pagination.href.previous %}
+                            <a href="{{ pagination.href.previous }}"
+                                class="relative inline-flex items-center rounded-l-md px-4 py-2 text-sm text-gray-800 ring-1 ring-inset ring-gray-500">
+                                <span class="font-semibold">Prev</span>
+                            </a>
+                            {% endif %}
+                            {% if pagination.href.next %}
+                            <a href="{{ pagination.href.next }}"
+                                class="relative inline-flex items-center rounded-r-md px-4 py-2 text-sm text-gray-800 ring-1 ring-inset ring-gray-500">
+                                <span class="font-semibold">Next</span>
+                            </a>
+                            {% endif %}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="h-96 rounded-xl p-8 bg-gray-50">
+            <h3 class="text-2xl font-bold">Categories</h3>
+            <ul class="my-8">
+                <li class=" font-semibold border-b py-4 border-gray-300">Web dev</li>
+                <li class=" font-semibold border-b py-4 border-gray-300">System Design</li>
+                <li class=" font-semibold border-b py-4 border-gray-300">React</li>
+                <li class=" font-semibold border-b py-4 border-gray-300">JavaScript</li>
+            </ul>
+        </div>
+    </div>
+</div>

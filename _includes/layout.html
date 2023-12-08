@@ -392,14 +392,20 @@
 </head>
 
 <body>
-    <header>
-        Header
+    <header class="body-font bg-gray-100 w-full">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 font-semibold text-black" href="/">Home</a>
+                <a class="mr-5 font-semibold text-black" href="/blog">Blog</a>
+                <a class="mr-5 font-semibold text-black" href="https://drive.google.com/file/d/1JqX1lxDO6vEObWCgiaFd_1hvimfJvRkt/view" target="_blank">Resume</a>
+            </nav>
+        </div>
     </header>
     <main>
         {{ content }}
     </main>
-    <footer>
-        Footer
+    <footer class="bg-black">
+        <p class="text-center text-white font-semibold p-4">Copyright © 2023 Dhruvang</p>
     </footer>
 </body>
 
