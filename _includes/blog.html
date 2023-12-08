@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruvang</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+    <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+</head>
+
+<body>
+    <h1>{{ title | default: "Dhruvang" }}</h1>
+    <header>
+        Header
+    </header>
+    <main>
+        <div class="prose lg:prose-xl mx-auto">
+            {{ content }}
+        </div>
+    </main>
+    <footer>
+        Footer
+    </footer>
+</body>
+
+</html>
