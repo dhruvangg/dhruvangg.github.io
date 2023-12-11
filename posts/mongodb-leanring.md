@@ -1,8 +1,10 @@
 ---
 title: MongoDB Leanring
+tags: ["Database", "Mongodb"]
 topics: ["Database", "Mongodb"]
 exceprt: 'Projection means selecting only the necessary data rather than selecting whole of the data of a document.'
-date: 2019-03-13 20:18:42
+featuredImg: mongodb.png
+date: 2023-01-13 05:00:00
 ---
 
 ### Projection

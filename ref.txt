@@ -3,3 +3,38 @@ paging: https://www.youtube.com/watch?v=ZUguRkGz-3Q
 
 Design Ref: https://preview.themeforest.net/item/dabba-a-wordpress-theme-for-blog-shop/full_screen_preview/23213008?_ga=2.85586141.533757166.1702039522-865723059.1696063829
 UI ref: https://design-milk.com/pantone-color-of-the-year-2024-pantone-13-1023-peach-fuzz/
+
+
+---
+topic: Tech
+---
+<!-- {% assign posts = collections.posts | topicFilter : topic %}
+
+{% for post in posts %}
+<h3><a href="{{ post.url }}">{{ post.data.title }} {{ post.data.topics }} </a></h3>
+{% endfor %} -->
+
+
+
+dark
+
+<div class="h-full bg-gray-800 shadow-xl px-8 pt-10 pb-20 rounded-lg overflow-hidden text-center relative">
+                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-4">
+                        {% for topic in post.data.topics %}
+                        <span
+                            class="inline-block bg-gray-100 text-gray-900 rounded-full px-3 py-1 text-xs font-semibold mr-2">{{topic}}</span>
+                        {% endfor %}
+                    </h2>
+                    <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">{{ post.data.title }}</h1>
+                    <p class="leading-relaxed mb-3 text-gray-300">{{ post.data.exceprt }}</p>
+                    <a class="text-indigo-400 inline-flex items-center" href="{{ post.url }}">Learn More<svg
+                            class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg></a>
+                    <div
+                        class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-6 font-semibold text-sm text-white">
+                        <time datetime="2022-01-28T13:36:17.039Z">January 28, 2022</time>
+                    </div>
+                </div>

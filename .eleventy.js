@@ -6,10 +6,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("debug", (content) => `<pre>${inspect(content)}</pre>`);
 
-  eleventyConfig.addFilter('topicFilter', function (collection, topic) {
-    if (!topic) return collection;
-    return collection.filter(item => item.data.topics.indexOf(topic) > -1)
-  });
+  // eleventyConfig.addFilter('topicFilter', function (collection, topic) {
+  //   if (!topic) return collection;
+  //   return collection.filter(item => item.data.topics.indexOf(topic) > -1)
+  // });
 
   return {
     pathPrefix: "/"

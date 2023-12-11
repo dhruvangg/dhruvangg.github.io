@@ -1,6 +1,6 @@
 ---
 title: Top 50 JavaScript Interview Questions
-topics: ["Tech", "JavaScript"]
+tags: ["javascript"]
 exceprt: 'In JavaScript, a primitive is data that is not an object and has no methods. There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null.'
 date: 2019-03-13 20:18:42
 ---
