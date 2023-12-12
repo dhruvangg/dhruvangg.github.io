@@ -1,8 +1,8 @@
 ---
-layout: blog.html
+layout: blog.liquid
 eleventyExcludeFromCollections: true
 ---
-{% for post in collections.javascript reversed %}
+{% for post in collections.git reversed %}
 <div class="grid grid-cols-5 bg-gray-50 shadow">
     {% if post.data.featuredImg %}
     <a class="col-span-2 flex flex-col justify-center" href="{{post.url}}">

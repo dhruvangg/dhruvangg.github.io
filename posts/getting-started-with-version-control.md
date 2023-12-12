@@ -17,7 +17,7 @@ Before going further let's check git have been installed properly or not by chec
  git --version 
 Now create/open your project folder in terminal or git bash and initialize git by running following code.
  git init 
-This command will create hidden folder called .git which will used for version control. Just ignore this folder as of now and start creating project related files. I have created index.html in my project folder.
+This command will create hidden folder called .git which will used for version control. Just ignore this folder as of now and start creating project related files. I have created index.liquid in my project folder.
 Let's check status of the project with git by running following command.
  git status 
 It will show me following response
@@ -26,11 +26,11 @@ It will show me following response
   Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-      modified:   index.html
+      modified:   index.liquid
   
   no changes added to commit (use "git add" and/or "git commit -a") 
-That means there is a file found "index.html" is modified. Now I will add this file into git by running following command. Git add [filename] selects that file, and moves it to the staging area, marking it for inclusion in the next commit.
- git add index.html 
+That means there is a file found "index.liquid" is modified. Now I will add this file into git by running following command. Git add [filename] selects that file, and moves it to the staging area, marking it for inclusion in the next commit.
+ git add index.liquid 
 Instead of writing file name, you can use . or star for multiple files. After adding file, I will again check git status, this time it respond with following output
  On branch main
   
@@ -38,7 +38,7 @@ Instead of writing file name, you can use . or star for multiple files. After ad
   
   Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
-      new file:   index.html 
+      new file:   index.liquid 
 Now its time to commit our changes using commit command. The git commit command captures a snapshot of the project's currently staged changes.
  git commit -m "Added My First File" 
 and It will show following response
@@ -46,7 +46,7 @@ and It will show following response
 
   1 file changed, 0 insertions(+), 0 deletions(-)
 
-  create mode 100604 index.html 
+  create mode 100604 index.liquid 
 Now Our code have been staged but we also have to store on centralize platform where others can access it too. There are multiple centralize platform available for git but today we would use GitHub. I already have an account in GitHub, you can create new one for free. Now login into you GitHub account and create new repository for your project as shown in screenshot below. 
 No alt text provided for this image
 Once you create new repository, you would get suggestion to setup remote repository for you local project. You can check it for your reference or skip to the following instruction to setup. 

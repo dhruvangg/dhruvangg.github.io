@@ -1,7 +1,12 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-.container {
-    max-width: 1200px;
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.prose *,
+p {
+    font-family: 'Roboto Mono', monospace;
 }
