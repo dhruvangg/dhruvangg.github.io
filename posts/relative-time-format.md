@@ -1,7 +1,7 @@
 ---
 title: Relative Time Format
-tags: ["javascript"]
-exceprt: The relative Time format is often used in social media, blogs, and chat applications. Earlier we have to make some functions to get relative time.
+tags: ["javascript", "featured"]
+exceprt: Dive into the world of web development as we demystify relative time formatting techniques, enhancing your understanding of time presentation.
 featuredImg: relative-time-format.png
 date: 2022-03-22 05:30:00
 ---

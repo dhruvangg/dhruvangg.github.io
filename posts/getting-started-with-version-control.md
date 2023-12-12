@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Version Control
-tags: ["Git"]
-exceprt: The Software engineering is a constantly changing field. When it comes to coding, there is no final version.
+tags: ["git", "featured"]
+exceprt: Unlock the power of version control systems, mastering the basics to streamline collaboration and safeguard your projects from code chaos.
 featuredImg: getting-started-with-version-control.png
 date: 2022-04-07 05:30:00
 ---

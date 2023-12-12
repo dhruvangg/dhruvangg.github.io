@@ -1,8 +1,7 @@
 ---
 title: MongoDB Leanring
-tags: ["Database", "Mongodb"]
-topics: ["Database", "Mongodb"]
-exceprt: 'Projection means selecting only the necessary data rather than selecting whole of the data of a document.'
+tags: ["mongodb", "featured"]
+exceprt: Delve into the fundamentals of MongoDB, understanding the principles and practices that lay the foundation for effective NoSQL database management.
 featuredImg: mongodb.png
 date: 2023-01-13 05:00:00
 ---

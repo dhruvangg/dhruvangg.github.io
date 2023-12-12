@@ -1,7 +1,8 @@
 ---
 title: Top React Questions
-tags: ["javascript", "React"]
-exceprt: 'In most cases, It is recommended to use controlled components to implement forms.'
+tags: ["javascript", "react"]
+exceprt: In most cases, It is recommended to use controlled components to implement forms.
+featuredImg: interview.png
 date: 2019-03-13 20:18:42
 ---
 ### Controlled components vs uncontrolled components

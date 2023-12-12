@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,700&family=Roboto+Mono&display=swap"
         rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{{ '/styles/main.css' | url }}"> -->
+    <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>
         tailwind.config = {
@@ -30,7 +30,8 @@
             font-family: 'Nunito Sans', sans-serif;
         }
 
-        .prose *, p {
+        .prose *,
+        p {
             font-family: 'Roboto Mono', monospace;
         }
     </style>
@@ -432,8 +433,28 @@
     <main>
         {{ content }}
     </main>
-    <footer class="bg-black">
-        <p class="text-center text-white font-semibold p-4">Copyright © 2023 Dhruvang</p>
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <span class="text-xl">dhruvang.com</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">&copy;
+                2023 —
+                <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer"
+                    target="_blank">@dhruvangg</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/dhruvangg">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none"
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                        </path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
     </footer>
 </body>
 
