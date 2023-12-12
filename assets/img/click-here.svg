@@ -1,0 +1,21 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.939734371614 112.99544413861611" width="297.939734371614" height="112.99544413861611">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+      @font-face {
+        font-family: "Assistant";
+        src: url("https://excalidraw.com/Assistant-Regular.woff2");
+      }
+    </style>
+    
+  </defs>
+  <rect x="0" y="0" width="297.939734371614" height="112.99544413861611" fill="#ffffff"></rect><g stroke-linecap="round"><g transform="translate(114.84721953536018 82.39597921114802) rotate(4.355160897996109 -53.1673270826916 -33.90053507253177)"><path d="M0.66 0.91 C-10.11 -1.14, -46.03 -1.67, -63.92 -12.93 C-81.81 -24.19, -99.66 -57.64, -106.68 -66.63 M-0.45 0.34 C-11.49 -1.51, -47.25 -0.32, -65.11 -11.77 C-82.97 -23.22, -100.87 -58.83, -107.62 -68.36" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(114.84721953536018 82.39597921114802) rotate(4.355160897996109 -53.1673270826916 -33.90053507253177)"><path d="M-88.02 -52.84 C-93.53 -59.14, -103.33 -64.55, -107.62 -68.36 M-88.02 -52.84 C-96.31 -58.38, -103.28 -64.55, -107.62 -68.36" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(114.84721953536018 82.39597921114802) rotate(4.355160897996109 -53.1673270826916 -33.90053507253177)"><path d="M-102.58 -43.87 C-102.77 -53.5, -107.29 -62.16, -107.62 -68.36 M-102.58 -43.87 C-105.11 -53.09, -106.29 -62.83, -107.62 -68.36" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g></g><mask></mask><g transform="translate(124.6798924526687 77.99544413861611) rotate(0 81.62992095947266 12.5)"><text x="0" y="0" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#1e1e1e" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">Click this button</text></g></svg>
