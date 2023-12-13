@@ -1,7 +1,7 @@
 <div class="grid grid-cols-5 bg-gray-50 shadow">
     {% if post.data.featuredImg %}
     <a class="col-span-2 flex flex-col justify-center" href="{{post.url}}">
-        <img src="{{ '/assets/img/' | append: post.data.featuredImg | url }}" alt="placeholder">
+        <img src="{{ '/assets/img/' | append: post.data.featuredImg | url }}" alt="photo of my tabby cat" />
     </a>
     {% endif %}
     <div class="col-span-3 p-8 ">
