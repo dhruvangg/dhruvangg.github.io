@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://dhruvang.com/posts/top-50-javascript-interview-questions/</loc>
+    <lastmod>2019-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/posts/top-react-questions/</loc>
+    <lastmod>2019-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/posts/relative-time-format/</loc>
+    <lastmod>2022-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/posts/getting-started-with-version-control/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/posts/mongodb-leanring/</loc>
+    <lastmod>2023-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/posts/NodeJS/</loc>
+    <lastmod>2023-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/posts/mastering-git-stash/</loc>
+    <lastmod>2023-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/collectives/humburger/</loc>
+    <lastmod>2023-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/collectives/search-filter-and-load-more-in-javascript/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/404.html</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/about/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/blog/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/projects/</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/sitemap.xml</loc>
+    <lastmod>2023-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/collectives/generic-createelement-function/</loc>
+    <lastmod>2023-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dhruvang.com/collectives/mutation-observer/</loc>
+    <lastmod>2023-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
