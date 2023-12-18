@@ -1,7 +1,7 @@
 ---
 title: Generic CreateElement Function
 tags: ['collectives']
-featuredImg: generic-createelement-function.png
+featuredImg: {'url': 'generic-createelement-function.png', width: '400px', height: '400px'}
 date: 2023-12-20 05:30:00
 ---
 

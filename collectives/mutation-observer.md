@@ -1,7 +1,7 @@
 ---
 title: Mutation observer in JavaScript
 tags: ['collectives']
-featuredImg: mutation-observer.png
+featuredImg: {'url': 'mutation-observer.png', width: '400px', height: '400px'}
 date: 2023-12-20 05:30:00
 ---
 

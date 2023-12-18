@@ -1,7 +1,7 @@
 ---
 title: Search, Filter and Load more in JavaScript
 tags: ['collectives']
-featuredImg: search-1.png
+featuredImg: {'url': 'search-1.png', width: '400px', height: '400px'}
 date: 2023-12-18 05:30:00
 ---
 
