@@ -1,6 +1,6 @@
-<div class="grid grid-cols-5 bg-gray-50 shadow">
+<div class="sm:grid sm:grid-cols-5 bg-gray-50 shadow-lg">
     {% if post.data.featuredImg %}
-    <a class="col-span-2 flex flex-col justify-center" href="{{post.url}}">
+    <a class="sm:col-span-2 flex flex-col justify-center" href="{{post.url}}">
         <img src="{{ '/assets/img/' | append: post.data.featuredImg | url }}" alt="photo of my tabby cat" />
     </a>
     {% endif %}

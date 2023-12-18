@@ -13,16 +13,16 @@ pagination:
     {% endfor %}
 </div>
 {% if pagination.pageLinks.length > 1 %}
-<div class="flex items-center justify-between border-t border-gray-200 mt-8 px-4 py-3 sm:px-6">
-    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+<div class="flex items-center justify-between border-y border-gray-200 px-4 py-3 sm:px-6">
+    <div class="w-full text-center sm:flex sm:flex-1 sm:items-center sm:justify-between">
         <div class="pb-6 sm:pb-0">
-            <p class="text-md text-gray-500">
+            <p class="text-xs font-semibold text-gray-500">
                 Showing
-                <span class="font-medium">
+                <span>
                     {{ pagination.pageNumber | times: pagination.size | plus: 1 }}
                 </span>
                 to
-                <span class="font-medium">
+                <span>
                     {% if pagination.nextPageLink %}
                     {{ pagination.pageNumber | times: pagination.size | plus: pagination.size }}
                     {% else %}
@@ -30,7 +30,7 @@ pagination:
                     {% endif %}
                 </span>
                 of
-                <span class="font-medium">{{ collections.posts.length }}</span>
+                <span>{{ collections.posts.length }}</span>
                 results
             </p>
         </div>
@@ -38,13 +38,13 @@ pagination:
             <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                 {% if pagination.href.previous %}
                 <a href="{{ pagination.href.previous }}"
-                    class="relative inline-flex items-center rounded-l-md px-4 py-2 text-sm text-gray-800 ring-1 ring-inset ring-gray-500">
+                    class="relative inline-flex items-center px-4 py-2 text-sm text-gray-800 ring-1 ring-inset ring-gray-500">
                     <span class="font-semibold">Prev</span>
                 </a>
                 {% endif %}
                 {% if pagination.href.next %}
                 <a href="{{ pagination.href.next }}"
-                    class="relative inline-flex items-center rounded-r-md px-4 py-2 text-sm text-gray-800 ring-1 ring-inset ring-gray-500">
+                    class="relative inline-flex items-center px-4 py-2 text-sm text-gray-800 ring-1 ring-inset ring-gray-500">
                     <span class="font-semibold">Next</span>
                 </a>
                 {% endif %}

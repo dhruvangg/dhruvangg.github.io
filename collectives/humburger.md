@@ -1,7 +1,7 @@
 ---
 title: Animated Humburger menu
 tags: ['collectives']
-featuredImg: humburger.gif
+featuredImg: humburger.jpg
 date: 2023-12-12 05:30:00
 ---
 
