@@ -11,21 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,700&family=Roboto+Mono&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                container: {
-                    center: true,
-                    maxWidth: '1200px'
-                },
-                listStyleType: {
-                    square: 'square',
-                }
-            }
-        }
-    </script>
-    <script src="//unpkg.com/alpinejs" defer></script>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hidden">
     <symbol id="caret-first" viewBox="0 0 32 32">
         <path
@@ -398,20 +383,21 @@
             fill-rule="evenodd"></path>
     </symbol>
 </svg>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WN9QWB8');</script>
-    <!-- End Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WN9QWB8');
+    </script>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <header class="bg-gray-50 w-full shadow relative" x-data="{ open: false }">
     <button class="fixed top-5 right-5 z-10 hamburger hamburger--squeeze sm:hidden" type="button" x-on:click="open = ! open" :class="open ? 'is-active' : ''">
         <span class="hamburger-box">
@@ -431,7 +417,7 @@
                 href="https://drive.google.com/file/d/1JqX1lxDO6vEObWCgiaFd_1hvimfJvRkt/view" target="_blank">resume</a>
         </nav>
         <div class="hidden sm:flex">
-            <a href="mailto:dhruvangg@gmail.com">
+            <a href="mailto:dhruvangg@gmail.com" aria-label="send email to dhruvangg@gmail.com">
                 <svg class="h-5 w-5" aria-hidden="true">
                     <use href="#email"></use>
                 </svg>
@@ -475,12 +461,11 @@
         <div class="flex flex-wrap -m-4">
             
             <a class="xl:w-1/4 md:w-1/2 p-4" href="/posts/top-50-javascript-interview-questions/">
-                <div class="bg-gray-100 h-full">
-                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                <div class="h-full shadow-xl">
+                    <img class="bg-gray-100 h-40 rounded w-full object-cover object-center"
                         src="/assets/img/interview.png" alt="content">
 
                     <div class="p-6">
-                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Top 50 JavaScript Interview Questions</h2>
                         <p class="leading-relaxed text-base">Explore essential JavaScript concepts and challenges in this comprehensive guide for mastering interviews and advancing your coding skills.</p>
                     </div>
@@ -488,12 +473,11 @@
             </a>
             
             <a class="xl:w-1/4 md:w-1/2 p-4" href="/posts/relative-time-format/">
-                <div class="bg-gray-100 h-full">
-                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                <div class="h-full shadow-xl">
+                    <img class="bg-gray-100 h-40 rounded w-full object-cover object-center"
                         src="/assets/img/relative-time-format.png" alt="content">
 
                     <div class="p-6">
-                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Relative Time Format</h2>
                         <p class="leading-relaxed text-base">Dive into the world of web development as we demystify relative time formatting techniques, enhancing your understanding of time presentation.</p>
                     </div>
@@ -501,12 +485,11 @@
             </a>
             
             <a class="xl:w-1/4 md:w-1/2 p-4" href="/posts/getting-started-with-version-control/">
-                <div class="bg-gray-100 h-full">
-                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                <div class="h-full shadow-xl">
+                    <img class="bg-gray-100 h-40 rounded w-full object-cover object-center"
                         src="/assets/img/getting-started-with-version-control.png" alt="content">
 
                     <div class="p-6">
-                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">git</h3>
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Getting Started with Version Control</h2>
                         <p class="leading-relaxed text-base">Unlock the power of version control systems, mastering the basics to streamline collaboration and safeguard your projects from code chaos.</p>
                     </div>
@@ -514,12 +497,11 @@
             </a>
             
             <a class="xl:w-1/4 md:w-1/2 p-4" href="/posts/mongodb-leanring/">
-                <div class="bg-gray-100 h-full">
-                    <img class="h-40 rounded w-full object-cover object-center mb-6"
+                <div class="h-full shadow-xl">
+                    <img class="bg-gray-100 h-40 rounded w-full object-cover object-center"
                         src="/assets/img/mongodb.png" alt="content">
 
                     <div class="p-6">
-                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">mongodb</h3>
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">MongoDB Leanring</h2>
                         <p class="leading-relaxed text-base">Delve into the fundamentals of MongoDB, understanding the principles and practices that lay the foundation for effective NoSQL database management.</p>
                     </div>
@@ -544,19 +526,19 @@
         <div class="grid grid-cols-4 gap-8 -m-4">
             
                 <a href="/collectives/humburger/">
-                    <img class="shadow-xl" src="/assets/img/humburger.jpg" alt="Animated Humburger menu">
+                    <img class="shadow-xl" src="/assets/img/humburger.png" width="400px" height="400px" alt="Animated Humburger menu">
                 </a>      
             
                 <a href="/collectives/search-filter-and-load-more-in-javascript/">
-                    <img class="shadow-xl" src="/assets/img/search-1.png" alt="Search, Filter and Load more in JavaScript">
+                    <img class="shadow-xl" src="/assets/img/search-1.png" width="400px" height="400px" alt="Search, Filter and Load more in JavaScript">
                 </a>      
             
                 <a href="/collectives/generic-createelement-function/">
-                    <img class="shadow-xl" src="/assets/img/generic-createelement-function.png" alt="Generic CreateElement Function">
+                    <img class="shadow-xl" src="/assets/img/generic-createelement-function.png" width="400px" height="400px" alt="Generic CreateElement Function">
                 </a>      
             
                 <a href="/collectives/mutation-observer/">
-                    <img class="shadow-xl" src="/assets/img/mutation-observer.png" alt="Mutation observer in JavaScript">
+                    <img class="shadow-xl" src="/assets/img/mutation-observer.png" width="400px" height="400px" alt="Mutation observer in JavaScript">
                 </a>      
             
         </div>
@@ -574,7 +556,7 @@
                 target="_blank">@dhruvangg</a>
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/dhruvangg">
+            <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/dhruvangg" aria-label="linkedin">
                 <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                     <path stroke="none"
@@ -586,6 +568,7 @@
         </span>
     </div>
 </footer>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>

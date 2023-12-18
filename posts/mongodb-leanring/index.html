@@ -11,21 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,700&family=Roboto+Mono&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                container: {
-                    center: true,
-                    maxWidth: '1200px'
-                },
-                listStyleType: {
-                    square: 'square',
-                }
-            }
-        }
-    </script>
-    <script src="//unpkg.com/alpinejs" defer></script>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hidden">
     <symbol id="caret-first" viewBox="0 0 32 32">
         <path
@@ -398,20 +383,21 @@
             fill-rule="evenodd"></path>
     </symbol>
 </svg>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WN9QWB8');</script>
-    <!-- End Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WN9QWB8');
+    </script>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <header class="bg-gray-50 w-full shadow relative" x-data="{ open: false }">
     <button class="fixed top-5 right-5 z-10 hamburger hamburger--squeeze sm:hidden" type="button" x-on:click="open = ! open" :class="open ? 'is-active' : ''">
         <span class="hamburger-box">
@@ -431,7 +417,7 @@
                 href="https://drive.google.com/file/d/1JqX1lxDO6vEObWCgiaFd_1hvimfJvRkt/view" target="_blank">resume</a>
         </nav>
         <div class="hidden sm:flex">
-            <a href="mailto:dhruvangg@gmail.com">
+            <a href="mailto:dhruvangg@gmail.com" aria-label="send email to dhruvangg@gmail.com">
                 <svg class="h-5 w-5" aria-hidden="true">
                     <use href="#email"></use>
                 </svg>
@@ -539,7 +525,7 @@
                 target="_blank">@dhruvangg</a>
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/dhruvangg">
+            <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/dhruvangg" aria-label="linkedin">
                 <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                     <path stroke="none"
@@ -551,6 +537,7 @@
         </span>
     </div>
 </footer>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>
