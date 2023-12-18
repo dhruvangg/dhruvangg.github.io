@@ -1,7 +1,12 @@
 <div class="sm:grid sm:grid-cols-5 bg-gray-50 shadow-lg">
     {% if post.data.featuredImg %}
     <a class="sm:col-span-2 flex flex-col justify-center" href="{{post.url}}">
-        <img src="{{ '/assets/img/' | append: post.data.featuredImg | url }}" alt="photo of my tabby cat" />
+        <picture>
+            <source type="image/webp" srcset="{{ post.data.featuredImg.url | webp | url }}">
+            <img src="{{ '/assets/img/' | append: post.data.featuredImg.url | url }}"
+                width="{{post.data.featuredImg.width}}" height="{{post.data.featuredImg.height}}"
+                alt="{{ post.data.title }}" loading="lazy" />
+        </picture>
     </a>
     {% endif %}
     <div class="col-span-3 p-8 ">
