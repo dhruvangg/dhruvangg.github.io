@@ -2,7 +2,7 @@
 title: Mastering Git Stash&#58; A Software Engineer's Guide
 tags: ["git"]
 exceprt: Git Stash – a powerful and often underutilized feature that can be a game-changer in managing your Git workflow efficiently.
-featuredImg: mastering-git-stash.png
+featuredImg: {'url': 'mastering-git-stash.png', width: '400px', height: '400px'}
 date: 2023-12-11 05:30:00
 ---
 

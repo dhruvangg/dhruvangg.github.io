@@ -2,7 +2,7 @@
 title: Top 50 JavaScript Interview Questions
 tags: ["javascript", "featured"]
 exceprt: Explore essential JavaScript concepts and challenges in this comprehensive guide for mastering interviews and advancing your coding skills.
-featuredImg: interview.png
+featuredImg: {'url': 'interview.png', width: '400px', height: '400px'}
 date: 2019-03-13 20:18:42
 ---
 ## Javascript-Topics

@@ -10,6 +10,12 @@ module.exports = function (eleventyConfig) {
     return format(date, dateFormat)
   })
 
+  eleventyConfig.addFilter('webp', function (name) {
+    const filename = name.split(".").slice(0, -1);
+    console.log(`/assets/img/webp/${filename}.webp`);
+    return `/assets/img/webp/${filename}.webp`;
+  });
+
   // eleventyConfig.addFilter('topicFilter', function (collection, topic) {
   //   if (!topic) return collection;
   //   return collection.filter(item => item.data.topics.indexOf(topic) > -1)

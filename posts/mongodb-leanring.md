@@ -2,7 +2,7 @@
 title: MongoDB Leanring
 tags: ["mongodb", "featured"]
 exceprt: Delve into the fundamentals of MongoDB, understanding the principles and practices that lay the foundation for effective NoSQL database management.
-featuredImg: mongodb.png
+featuredImg: {'url': 'mongodb.png', width: '400px', height: '400px'}
 date: 2023-01-13 05:00:00
 ---
 

@@ -38,9 +38,13 @@ layout: layout.liquid
             {% for post in collections.featured %}
             <a class="xl:w-1/4 md:w-1/2 p-4" href="{{post.url}}">
                 <div class="h-full shadow-xl">
-                    <img class="bg-gray-100 h-40 rounded w-full object-cover object-center"
-                        src="{{ '/assets/img/' | append: post.data.featuredImg | url }}" alt="content">
-
+                    <picture>
+                        <source type="image/webp" srcset="{{ post.data.featuredImg.url | webp | url }}">
+                        <img class="bg-gray-100 h-40 rounded w-full object-cover object-center"
+                            src="{{ '/assets/img/' | append: post.data.featuredImg.url | url }}"
+                            width="{{post.data.featuredImg.width}}" height="{{post.data.featuredImg.height}}"
+                            alt="{{ post.data.title }}" loading="lazy" />
+                    </picture>
                     <div class="p-6">
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ post.data.title }}</h2>
                         <p class="leading-relaxed text-base">{{ post.data.exceprt }}</p>
@@ -65,9 +69,14 @@ layout: layout.liquid
         </div>
         <div class="grid grid-cols-4 gap-8 -m-4">
             {% for post in collections.collectives %}
-                <a href="{{post.url}}">
-                    <img class="shadow-xl" src="{{ '/assets/img/' | append: post.data.featuredImg.url | url }}" width="{{post.data.featuredImg.width}}" height="{{post.data.featuredImg.height}}" alt="{{ post.data.title }}">
-                </a>      
+            <a href="{{post.url}}">
+                <picture>
+                    <source type="image/webp" srcset="{{ post.data.featuredImg.url | webp | url }}">
+                    <img class="shadow-xl" src="{{ '/assets/img/' | append: post.data.featuredImg.url | url }}"
+                        width="{{post.data.featuredImg.width}}" height="{{post.data.featuredImg.height}}"
+                        alt="{{ post.data.title }}" loading="lazy" />
+                </picture>
+            </a>
             {% endfor %}
         </div>
     </div>

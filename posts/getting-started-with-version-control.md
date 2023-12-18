@@ -2,7 +2,7 @@
 title: Getting Started with Version Control
 tags: ["git", "featured"]
 exceprt: Unlock the power of version control systems, mastering the basics to streamline collaboration and safeguard your projects from code chaos.
-featuredImg: getting-started-with-version-control.png
+featuredImg: {'url': 'getting-started-with-version-control.png', width: '400px', height: '400px'}
 date: 2022-04-07 05:30:00
 ---
 
