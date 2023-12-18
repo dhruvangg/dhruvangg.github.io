@@ -5,7 +5,7 @@ exceprt: Explore essential JavaScript concepts and challenges in this comprehens
 featuredImg: interview.png
 date: 2019-03-13 20:18:42
 ---
-# Javascript-Topics
+## Javascript-Topics
 
 ### Primitive Types
 
