@@ -1,7 +1,7 @@
 ---
 title: Top React Questions
 tags: ["javascript", "react"]
-exceprt: In most cases, It is recommended to use controlled components to implement forms.
+description: In most cases, It is recommended to use controlled components to implement forms.
 featuredImg: {'url': 'interview.png', width: '400px', height: '400px'}
 date: 2019-03-13 20:18:42
 ---

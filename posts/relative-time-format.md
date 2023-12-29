@@ -1,7 +1,7 @@
 ---
 title: Relative Time Format
 tags: ["javascript", "featured"]
-exceprt: Dive into the world of web development as we demystify relative time formatting techniques, enhancing your understanding of time presentation.
+description: Dive into the world of web development as we demystify relative time formatting techniques, enhancing your understanding of time presentation.
 featuredImg: {'url': 'relative-time-format.png', width: '400px', height: '400px'}
 date: 2022-03-22 05:30:00
 ---

@@ -16,6 +16,10 @@ module.exports = function (eleventyConfig) {
     return `/assets/img/webp/${filename}.webp`;
   });
 
+  eleventyConfig.addFilter( "isArticlePage", function(url) {
+    return url.split("/").includes('post')
+  });
+
   // eleventyConfig.addFilter('topicFilter', function (collection, topic) {
   //   if (!topic) return collection;
   //   return collection.filter(item => item.data.topics.indexOf(topic) > -1)

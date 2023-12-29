@@ -1,13 +1,13 @@
 ---
 title: "Choosing 11ty for Your Blog: The Smart Developer's Choice"
 tags: ["javascript"]
-exceprt: Eleventy, also known as 11ty, is a simpler static site generator. It converts plain text into a fully functional website without the need for a database or server-side processing.
+description: Eleventy is a simpler static site generator. It converts plain text into a fully functional website without a database or server-side processing.
 featuredImg: {'url': '11ty.svg', width: '400px', height: '400px'}
 date: 2023-12-29 05:00:00
 ---
 Creating a website can be a daunting task, especially for those who are new to web development. However, with Eleventy (11ty), a simpler static site generator, the process becomes more approachable and enjoyable. This article will guide you through creating and deploying your first website using Eleventy, step by step.
 
-### What is Eleventy?
+## What is Eleventy?
 
 Eleventy, also known as 11ty, is a simpler static site generator. It converts plain text into a fully functional website without the need for a database or server-side processing. It's popular for its simplicity, flexibility, and performance, making it an excellent choice for personal blogs, portfolios, and even small business websites.
 
