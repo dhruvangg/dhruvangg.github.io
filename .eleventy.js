@@ -12,7 +12,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('webp', function (name) {
     const filename = name.split(".").slice(0, -1);
-    console.log(`/assets/img/webp/${filename}.webp`);
     return `/assets/img/webp/${filename}.webp`;
   });
 
