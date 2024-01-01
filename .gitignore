@@ -132,15 +132,5 @@ _site/*
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-_site/index.liquid
-_site/index.liquid
-_site/blog/index.liquid
-_site/blog/1/index.liquid
-_site/blog/2/index.liquid
-_site/posts/first-blog/index.liquid
-_site/posts/JavaScript/index.liquid
-_site/posts/javascript-interview-questions/index.liquid
-_site/posts/mongodb/index.liquid
-_site/posts/NodeJS/index.liquid
-_site/posts/post-1/index.liquid
-_site/posts/React/index.liquid
+_site
+*.out.css
