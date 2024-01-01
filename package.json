@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy && npx tailwindcss -i styles.css -o _site/styles.out.css",
+    "build": "npx @11ty/eleventy && npx tailwindcss -i styles.css -o _site/styles.css",
     "start": "npx @11ty/eleventy --serve",
     "debug": "set DEBUG=Eleventy* && npx @11ty/eleventy --serve",
     "dev:tailwind": "tailwindcss -i styles.css -o styles.out.css --watch"
