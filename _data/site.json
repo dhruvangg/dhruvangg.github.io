@@ -2,6 +2,7 @@
     "name": "dhruvang.com",
     "url": "https://dhruvang.com",
     "authorName": "Dhruvang Gajjar",
+    "banner": "assets/img/og-image.png",
     "authorUrl": "https://www.linkedin.com/in/dhruvangg",
     "description": "11ty.recipes helps you build an Eleventy site from scratch, showing you how to add individual features to craft the exact site you need.",
     "favicon": "https://11ty.recipes/images/meta/favicon.svg"
