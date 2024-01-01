@@ -38,7 +38,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,700&family=Roboto+Mono&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles.css">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hidden">
     <symbol id="caret-first" viewBox="0 0 32 32">
         <path
@@ -423,7 +423,7 @@
     </script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <header class="bg-gray-50 w-full shadow relative" x-data="{ open: false }">
@@ -455,9 +455,9 @@
 </header>
     <main>
         <div class="bg-gray-100">
-    <div class="container max-w-screen-lg py-16">
+    <div class="container max-w-screen-lg py-8 lg:py-16 px-4">
         
-        <h1 class="text-6xl font-bold my-8">Top React Questions</h1>
+        <h1 class="lg:text-6xl sm:text-4xl text-2xl font-bold my-8">Top React Questions</h1>
         <p class="font-semibold">13 Mar, 2019</p>
         <ul class="flex mt-6">
             <li class="pr-8">
@@ -509,7 +509,7 @@
         </svg>
     </div>
 </div>
-<div class="prose lg:prose-xl mx-auto my-8">
+<div class="prose lg:prose-xl mx-auto my-8 px-4">
     <h3>Controlled components vs uncontrolled components</h3>
 <p>In most cases, It is recommended to use controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself.</p>
 

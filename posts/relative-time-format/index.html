@@ -38,7 +38,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,700&family=Roboto+Mono&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles.css">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hidden">
     <symbol id="caret-first" viewBox="0 0 32 32">
         <path
@@ -423,7 +423,7 @@
     </script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <header class="bg-gray-50 w-full shadow relative" x-data="{ open: false }">
@@ -455,9 +455,9 @@
 </header>
     <main>
         <div class="bg-gray-100">
-    <div class="container max-w-screen-lg py-16">
+    <div class="container max-w-screen-lg py-8 lg:py-16 px-4">
         
-        <h1 class="text-6xl font-bold my-8">Relative Time Format</h1>
+        <h1 class="lg:text-6xl sm:text-4xl text-2xl font-bold my-8">Relative Time Format</h1>
         <p class="font-semibold">22 Mar, 2022</p>
         <ul class="flex mt-6">
             <li class="pr-8">
@@ -509,7 +509,7 @@
         </svg>
     </div>
 </div>
-<div class="prose lg:prose-xl mx-auto my-8">
+<div class="prose lg:prose-xl mx-auto my-8 px-4">
     <p>The relative Time format is often used in social media, blogs, and chat applications. Earlier we have to make some functions to get relative time. Now It can be achievable by Vanilla JavaScript.</p>
 <blockquote>
 <p>Intl.RelativeTimeFormat() enables localized formatting of relative times without sacrificing performance.</p>
