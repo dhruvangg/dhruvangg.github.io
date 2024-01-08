@@ -4,6 +4,8 @@ title: JavaScript | Dhruvang Gajjar
 description: All the posts related to JavaScript.
 eleventyExcludeFromCollections: true
 ---
-{% for post in collections.javascript reversed %}
+<div class="grid gap-8">
+    {% for post in collections.javascript reversed %}
     {% render 'card' post:post %}
-{% endfor %}
+    {% endfor %}
+</div>

@@ -8,7 +8,7 @@
     <meta name="title" content="{{ title }}">
     <meta name="description" content="{{ description }}">
     <link rel="canonical" href="{{ site.url | append: page.url | url }}" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{{ 'article' if tags else 'website' }}">
     <meta property="og:url" content="{{ site.url | append: page.url | url }}">
@@ -38,16 +38,17 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,700&family=Roboto+Mono&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ '/styles.css' | url }}">
+    <script src="https://cdn.tailwindcss.com"></script>
     {% render 'svgs' %}
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WN9QWB8');
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WN9QWB8');
     </script>
 </head>
 

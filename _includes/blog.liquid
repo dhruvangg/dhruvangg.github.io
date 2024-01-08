@@ -2,12 +2,10 @@
 layout: layout.liquid
 ---
 <section>
-    <div class="container my-8 px-4">
+    <div class="max-w-screen-xl mx-auto my-8">
         <div class="grid lg:grid-cols-4 gap-8 relative">
-            <div class="lg:col-span-3">
-                <div class="grid gap-8">
-                    {{content}}
-                </div>
+            <div class="lg:col-span-3 grid gap-8">
+                {{content}}
             </div>
             {% render 'sidebar' %}
         </div>

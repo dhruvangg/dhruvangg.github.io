@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./**/*.{html,md,js}", '_site/**/*.liquid'],
+  content: ["./**/*.{html,liquid,md,js}", '_site/**/*.liquid'],
   theme: {
-    container: {
+    max-w-screen-xl mx-auto: {
       center: true,
-      maxWidth: '1200px'
+      padding: '1rem'
     },
   },
   plugins: [

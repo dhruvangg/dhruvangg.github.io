@@ -4,6 +4,8 @@ title: NodeJS | Dhruvang Gajjar
 description: All the posts related to NodeJS.
 eleventyExcludeFromCollections: true
 ---
-{% for post in collections.nodejs reversed %}
+<div class="grid gap-8">
+    {% for post in collections.nodejs reversed %}
     {% render 'card' post:post %}
-{% endfor %}
+    {% endfor %}
+</div>

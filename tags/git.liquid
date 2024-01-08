@@ -4,6 +4,8 @@ title: Git | Dhruvang Gajjar
 description: All the posts related to Git.
 eleventyExcludeFromCollections: true
 ---
-{% for post in collections.git reversed %}
-{% render 'card' post:post %}
-{% endfor %}
+<div class="grid gap-8">
+    {% for post in collections.git reversed %}
+    {% render 'card' post:post %}
+    {% endfor %}
+</div>

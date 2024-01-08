@@ -1,12 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.prose *, p {
+.prose *,
+p {
     font-family: 'Roboto Mono', monospace;
 }
 

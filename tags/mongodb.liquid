@@ -4,6 +4,8 @@ title: MongoDB | Dhruvang Gajjar
 description: All the posts related to MongoDB.
 eleventyExcludeFromCollections: true
 ---
-{% for post in collections.mongodb reversed %}
+<div class="grid gap-8">
+    {% for post in collections.mongodb reversed %}
     {% render 'card' post:post %}
-{% endfor %}
+    {% endfor %}
+</div>
