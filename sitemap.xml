@@ -140,22 +140,29 @@
   </url>
   
   <url>
+    <loc>https://dhruvang.com/posts/create-a-simple-virtual-dom-in-javascript/</loc>
+    <lastmod>2023-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>https://dhruvang.com/404.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2024-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://dhruvang.com/projects/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2024-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://dhruvang.com/sitemap.xml</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2024-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
