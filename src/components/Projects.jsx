@@ -5,10 +5,10 @@ export default function Projects() {
         <section className="relative overflow-hidden" id="projects">
             <div className="absolute top-0 w-full bg flex bg-blue-700 h-full -z-10">
                 <svg height="800" width="800" className="absolute top-0 left-0 h-full" id="animateY">
-                    <rect width="100%" height="100%" stroke-width="3" fill="#0099ff" />
+                    <rect width="100%" height="100%" strokeWidth="3" fill="#0099ff" />
                 </svg>
                 <svg height="500" width="500" className="circle absolute top-0 right-0">
-                    <circle cx="500" cy="0" r="250" stroke-width="3" fill="#FFEB3B" />
+                    <circle cx="500" cy="0" r="250" strokeWidth="3" fill="#FFEB3B" />
                 </svg>
             </div>
             <div className="container">

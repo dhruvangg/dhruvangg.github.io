@@ -5,7 +5,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "dhruvang.com",
-  description: "A Software Developer's Blog",
+  description: "Dhruvang Gajjar, a software engineer with 6+ YoE in web development industry. Product Management, Problem solving and requiement understanding expert.",
+  keywords: ['dhruvang', 'champdecay', 'software', 'blog'],
+  image: '',
 };
 
 export default function RootLayout({ children }) {
