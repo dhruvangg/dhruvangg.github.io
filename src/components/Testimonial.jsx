@@ -1,7 +1,10 @@
 'use client';
 
+import { useGSAP } from '@gsap/react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import gsap from 'gsap';
+import { useRef } from 'react';
 
 export default function Testimonial() {
     const reviews = [{
@@ -21,18 +24,27 @@ export default function Testimonial() {
         "designation": "QA Analyst",
         "comment": "He&apos;s committed to quality, growth, and progress, and he inspires his team members to strive for the same. In short, Champ is a person with vision. Dhruvang&apos;s fun and friendly personality are just icing on the cake of his many other qualifications.<br />As a team member or a leader, Dhruvang earns my highest recommendation."
     }]
+
+    const headRef = useRef()
+
+    useGSAP(() => {
+        gsap.to(headRef.current, { x: -2500, duration: 100 });
+    }, { scope: headRef })
     
     return (
         <section className="py-24 overflow-hidden">
             <h3 className="text-8xl o-big-title font-light">
-                <span className="smooth_head--wrapper flex-none flex flex-row flex-nowrap justify-start items-start" style={{ transform: 'translateZ(0)' }}>
+                <span ref={headRef} className="flex-none flex flex-row flex-nowrap justify-start items-start" style={{ transform: 'translateZ(0)' }}>
+                    <span className="smooth_head--movable flex-none block mr-16">What People are saying?</span>
+                    <span className="smooth_head--movable flex-none block mr-16">What People are saying?</span>
+                    <span className="smooth_head--movable flex-none block mr-16">What People are saying?</span>
                     <span className="smooth_head--movable flex-none block mr-16">What People are saying?</span>
                 </span>
             </h3>
             <div className="container mt-12">
                 <div className="px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
                     <section className="flex cursor-grab justify-center">
-                        <Splide aria-label="Testimonials" options={{ type: 'loop', autoplay: true, arrows: false, autoHeight: true, pagination: false }}>
+                        <Splide aria-label="Testimonials" options={{ type: 'loop', autoplay: true, arrows: false, autoHeight: true, pagination: false, interval: 5000 }}>
                             {reviews.map(review => <SplideSlide key={review.name} className="splide__slide" data-splide-interval="5000">
                                 <figure className="mx-auto">
                                     <svg className="h-12 mx-auto mb-3 text-gray-400" viewBox="0 0 24 27" fill="none"

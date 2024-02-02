@@ -8,6 +8,7 @@ export const metadata = {
   description: "Dhruvang Gajjar, a software engineer with 6+ YoE in web development industry. Product Management, Problem solving and requiement understanding expert.",
   keywords: ['dhruvang', 'champdecay', 'software', 'blog'],
   image: '',
+  canonical: '#'
 };
 
 export default function RootLayout({ children }) {

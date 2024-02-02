@@ -1,5 +1,15 @@
 'use client';
 
+import Link from "next/link";
+
+const Menu = [{
+    href: '/blog',
+    label: 'Blog'
+}, {
+    href: '#',
+    label: 'Contact'
+}]
+
 export default function Header() {
     return (
         <header className="w-full py-4">
@@ -22,9 +32,7 @@ export default function Header() {
                 </a>
                 <nav>
                     <ul className="flex">
-                        <li><a className="block mx-2 p-2 text-sm font-semibold" href="#">Blog</a></li>
-                        <li><a className="block mx-2 p-2 text-sm font-semibold" href="#">About</a></li>
-                        <li><a className="block mx-2 p-2 text-sm font-semibold" href="#">Contact</a></li>
+                        {Menu.map(el => <li key={el.href}><Link className="block mx-2 p-2 text-sm font-semibold" href={el.href}>{el.label}</Link></li>)}
                     </ul>
                 </nav>
             </div>
