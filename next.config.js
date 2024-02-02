@@ -2,12 +2,9 @@
  * @type {import('next').NextConfig}
  */
 
-const withMDX = require('@next/mdx')()
-
 const nextConfig = {
     reactStrictMode: true,
     output: 'export',
-    pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
     images: { unoptimized: true }
     // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
     // trailingSlash: true,
@@ -19,4 +16,4 @@ const nextConfig = {
     // distDir: 'dist',
 }
 
-module.exports = withMDX(nextConfig)
+module.exports = nextConfig
