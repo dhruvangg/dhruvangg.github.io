@@ -3,6 +3,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all';
 import { useGSAP } from "@gsap/react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import workLottie from '../../public/work.json'
+
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({ limitCallbacks: true });
 
@@ -50,7 +53,7 @@ export default function Experiance() {
         <section ref={workRef} id="work" className="w-full bg-blue-700 relative h-screen overflow-hidden">
             <div className="grid grid-cols-2 container h-screen">
                 <div className="z-10 flex flex-col justify-center h-screen">
-                    <div id="experiance"></div>
+                    <Player autoplay loop src={workLottie} />
                     <h3 className="text-4xl font-light leading-tight text-center">Work Experiance</h3>
                 </div>
                 <div className="text-white z-10 px-24">
