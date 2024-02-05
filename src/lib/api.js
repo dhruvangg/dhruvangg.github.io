@@ -29,6 +29,7 @@ contentfulMetadata {
 `;
 
 async function fetchGraphQL(query, preview = false) {
+  console.log('CONTENTFUL_SPACE_ID', process.env.CONTENTFUL_SPACE_ID);
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
@@ -76,10 +77,7 @@ export async function getAllArticles(
   return extractArticleEntries(articles);
 }
 
-export async function getArticle(
-  slug,
-  isDraftMode = false
-) {
+export async function getArticle(slug, isDraftMode = false) {
   const article = await fetchGraphQL(
     `query {
           articlesCollection(where:{url: "${slug}"}, limit: 1, preview: ${isDraftMode ? "true" : "false"
