@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Experiance from "@/components/Experiance";
 import Projects from "@/components/Projects";
 import Testimonial from "@/components/Testimonial";

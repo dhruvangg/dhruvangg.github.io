@@ -15,9 +15,6 @@ export async function generateStaticParams() {
     }));
 }
 
-
-
-
 export default async function KnowledgeArticle({ params }) {
     const article = await getArticle(params.slug);
     if (!article) {
