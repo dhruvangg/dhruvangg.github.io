@@ -17,10 +17,17 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    environment: production
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+
+      - name: Store variables
+        run: |
+          echo ${{ secrets.CONTENTFUL_SPACE_ID }}
+          echo "CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}"  
+          echo ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          echo "CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}"  
 
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/setup-node
