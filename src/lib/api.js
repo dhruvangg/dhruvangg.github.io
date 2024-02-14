@@ -1,5 +1,8 @@
-// Set a variable that contains all the fields needed for articles when a fetch for
-// content is performed
+
+const CONTENTFUL_SPACE_ID="4lqqjda181tr"
+const CONTENTFUL_ACCESS_TOKEN="kMrTj6uKdzP-fJvpa7U2GmB0utKnNDmxyj7ATY88nsg"
+const CONTENTFUL_PREVIEW_ACCESS_TOKEN="yu5pynoXrBRQiBD-HYgFVaZSNBda6Ss0qafhYNLrZDk"
+
 const ARTICLE_GRAPHQL_FIELDS = `
 title
 url
@@ -29,9 +32,9 @@ contentfulMetadata {
 `;
 
 async function fetchGraphQL(query, preview = false) {
-  console.log('CONTENTFUL_SPACE_ID', process.env.CONTENTFUL_SPACE_ID);
+  console.log('CONTENTFUL_SPACE_ID', CONTENTFUL_SPACE_ID);
   return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+    `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`,
     {
       method: "POST",
       headers: {
@@ -39,8 +42,8 @@ async function fetchGraphQL(query, preview = false) {
         // Switch the Bearer token depending on whether the fetch is supposed to retrieve live
         // Contentful content or draft content
         Authorization: `Bearer ${preview
-          ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-          : process.env.CONTENTFUL_ACCESS_TOKEN
+          ? CONTENTFUL_PREVIEW_ACCESS_TOKEN
+          : CONTENTFUL_ACCESS_TOKEN
           }`,
       },
       body: JSON.stringify({ query }),
