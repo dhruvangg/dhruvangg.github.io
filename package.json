@@ -1,0 +1,26 @@
+{
+  "name": "dhruvangg.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/styles.css --minify",
+    "build": "npm run build:css && eleventy",
+    "serve": "npm run build:css && eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "dayjs": "^1.11.13",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}
