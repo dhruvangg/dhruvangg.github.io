@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.toc {
+    font-family: Arial, sans-serif;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.toc ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc li {
+    margin: 0.5rem 0;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #007acc;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀</title>
+        <title>How does the browser show a webpage (Critical Rendering Path)?</title>
         <link rel="stylesheet" href="/assets/styles.css">
     </head>
     <body>
@@ -52,73 +52,108 @@
                         <dl class="space-y-10">
                             <div>
                                 <dt class="sr-only">Published on</dt>
-                                <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"><time datetime="2023-08-05T00:00:00.000Z">Thursday January 9, 2025</time></dd>
+                                <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"><time datetime="2023-08-05T00:00:00.000Z">Friday January 10, 2025</time></dd>
                             </div>
                         </dl>
-                        <div><h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀</h1></div>
+                        <div><h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">How does the browser show a webpage (Critical Rendering Path)?</h1></div>
                     </div>
                 </header>
                 <section class="md:flex flex-row-reverse">
                 <article class="prose lg:prose-xl dark:prose-invert pt-6">
-                <p>When working with file I/O operations in Node.js, choosing the right file reading method is crucial for optimizing performance and ensuring smooth execution of your application. Here's a quick breakdown of three common methods and when to use each:</p>
+                <p>The Critical Rendering Path (CRP) refers to the sequence of steps the browser follows to render a webpage from the moment you request it (by typing a URL or clicking a link) to the moment it appears on the screen. Optimizing this path is key to improving web performance.</p>
+<p>Here's a breakdown of the Critical Rendering Path:</p>
+<hr>
 <ol>
-<li>readFileSync (Synchronous):
-Blocks the event loop until the file is completely read.
-Use it when you don’t need to execute further code while reading the file, and blocking is acceptable (e.g., startup tasks or simple scripts).</li>
-</ol>
-<pre><code class="language-javascript">import { readFileSync } from &quot;node:fs&quot;;
-
-try {
-  const data = fs.readFileSync(&quot;example.txt&quot;, &quot;utf8&quot;);
-  console.log(&quot;File contents:&quot;, data);
-} catch (err) {
-  console.error(&quot;Error reading file:&quot;, err);
-}
-</code></pre>
-<ol start="2">
-<li>readFile (Asynchronous with Callback):
-Non-blocking operation: allows other tasks to run while waiting for the file to be read.
-Use it when you need to handle other tasks concurrently while reading the file.</li>
-</ol>
-<pre><code class="language-javascript">const fs = require('fs');
-
-fs.writeFile('output.txt', 'Hello, World!', (err) =&gt; {
-    if (err) {
-        console.error('Error writing file:', err);
-    } else {
-        console.log('File written successfully!');
-    }
-});
-</code></pre>
-<ol start="3">
-<li>fs.promises.readFile (Promise-based, with async/await):
-Similar to readFile, but allows you to work with Promises and async/await for cleaner, more readable code.
-Use it when you prefer Promises or async/await for error handling and cleaner syntax.</li>
-</ol>
-<pre><code class="language-javascript">import { readFile } from 'node:fs/promises'
-
-readFile('sample.txt', 'utf8')
-    .then(data =&gt; console.log(data))
-    .catch(err =&gt; console.error(err))
-</code></pre>
-<h3>Summary:</h3>
+<li>Request the Document (HTML)
 <ul>
-<li>readFileSync: Use when:No further code execution is needed immediately. It's acceptable to block the event loop for the duration of the file read.</li>
-<li>readFile (callback-based) or fs.promises.readFile (Promise-based): Use when:You want to perform other tasks while the file is being read (non-blocking).You need better handling of asynchronous operations (especially with multiple tasks).</li>
+<li><strong>URL entered → HTTP request:</strong> The browser sends a request for the HTML document to the web server.</li>
+<li><strong>Initial response:</strong> The server sends back the HTML file, which starts the rendering process.</li>
 </ul>
-<p>In short:</p>
+</li>
+<li>Parse the HTML
 <ul>
-<li>readFileSync = Block until file is read (best for simple scripts or single operations with no concurrent I/O).</li>
-<li>readFile / fs.promises.readFile = Allow other code to run while waiting for the file (best for handling multiple tasks or concurrent I/O operations).</li>
+<li><strong>DOM Construction:</strong> The browser starts parsing the HTML document and builds the <strong>DOM (Document Object Model).</strong></li>
+<li>The DOM represents the structure and content of the page, such as elements, text, and attributes.</li>
 </ul>
-<p>Let me know if you need more clarification!</p>
-<p>💡 Tip: In modern Node.js apps, prefer fs.promises.readFile to take full advantage of async/await for better error handling and cleaner code! 🚀</p>
+</li>
+<li>Request External Resources
+<ul>
+<li><strong>CSS, JavaScript, Images:</strong> As the HTML is parsed, the browser identifies external resources like CSS files, JavaScript, and images. The browser requests these resources, which can block the rendering of the page if they are critical (e.g., CSS required to display content properly).</li>
+</ul>
+</li>
+<li>Build the CSSOM (CSS Object Model)
+<ul>
+<li>The browser parses CSS files (either inline in the HTML or from external resources) to create the CSSOM.</li>
+<li>The CSSOM represents the styles applied to the HTML elements and determines how elements will be rendered visually.</li>
+</ul>
+</li>
+<li>Combine DOM + CSSOM = Render Tree
+<ul>
+<li>The browser merges the DOM and CSSOM to create the Render Tree.</li>
+<li>The render tree represents the visual structure of the page, containing only the elements that need to be displayed and their styles.</li>
+</ul>
+</li>
+<li>Layout (Reflow)
+<ul>
+<li>The browser calculates the exact position and size of each element based on the Render Tree.</li>
+<li>This step is known as layout or reflow. For example, the browser decides where to place the text, images, and buttons on the page.</li>
+</ul>
+</li>
+<li>Paint
+<ul>
+<li>The browser paints the visual elements (e.g., text, images, colors) onto the screen based on the layout.</li>
+<li>At this stage, the browser draws pixels to render the page.</li>
+</ul>
+</li>
+<li>Composite Layers
+<ul>
+<li><strong>Compositing:</strong> If the page includes complex elements (e.g., animations, scrollable areas, etc.), the browser splits the page into layers and composites them together to form the final page view.</li>
+<li>The browser renders and layers these elements efficiently to display a smooth page.</li>
+</ul>
+</li>
+<li>JavaScript Execution
+<ul>
+<li>The browser executes JavaScript code, which can modify the DOM, CSSOM, or trigger additional network requests.</li>
+<li>If JavaScript is blocking the critical path (e.g., JS that manipulates the DOM), it can delay rendering.</li>
+</ul>
+</li>
+<li>Final Rendering
+<ul>
+<li>Once the layout is complete and the layers are composited, the browser renders the page to the screen, and the user can interact with it.</li>
+<li>The page is considered fully rendered when all resources (fonts, images, etc.) have loaded.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3>Optimizing the Critical Rendering Path:</h3>
+<ul>
+<li><strong>Minimize blocking resources:</strong> Load critical CSS and JavaScript early and defer non-essential resources.</li>
+<li><strong>Inline critical CSS:</strong> To prevent additional HTTP requests.</li>
+<li><strong>Lazy-load images and scripts:</strong> Load resources that are not immediately visible only when they are needed.</li>
+<li><strong>Asynchronous JavaScript:</strong> Use async or defer attributes to prevent blocking the rendering process with JavaScript.</li>
+</ul>
+<hr>
+<h3>Summary of CRP Steps:</h3>
+<ol>
+<li>Request the document</li>
+<li>Parse HTML (DOM)</li>
+<li>Request external resources (CSS/JS)</li>
+<li>Build CSSOM (CSS Object Model)</li>
+<li>Create Render Tree (DOM + CSSOM)</li>
+<li>Layout (Reflow)</li>
+<li>Paint</li>
+<li>Composite layers</li>
+<li>Execute JavaScript</li>
+<li>Final rendering</li>
+</ol>
+<p>By focusing on optimizing each step in the Critical Rendering Path, developers can improve page load times, enhance the user experience, and build faster websites.</p>
+<p>Let me know if you'd like a deeper dive into any of these steps! 😊</p>
 
                 </article>
                 <aside class="flex-1 p-6">
                     <div class="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:col-start-4 xl:divide-y-0">
                         <div class="prose dark:prose-invert"><h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Tags</h2>
-                        <a class="capitalize mr-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/featured">featured</a> <a class="capitalize mr-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/nodejs">nodejs</a></div>
+                        <a class="capitalize mr-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/featured">featured</a> <a class="capitalize mr-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/post">post</a></div>
                         </div>
                     </aside></section></div> 
                 
