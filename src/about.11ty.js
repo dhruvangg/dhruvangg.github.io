@@ -2,10 +2,11 @@ class About {
     data() {
         return {
             title: "About",
+            image: "./images/profile.jpeg",
             layout: "layout.11ty.js",
         };
     }
-    render() {
+    render({ image }) {
         return `
         <div class="divide-y divide-gray-200 dark:divide-gray-700">
     <div class="space-y-2 pb-8 pt-6 md:space-y-5"><h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">About</h1></div>
@@ -19,8 +20,7 @@ class About {
                 decoding="async"
                 data-nimg="1"
                 class="h-48 w-48 rounded-full"
-                srcset="/_next/image?url=%2Fstatic%2Fimages%2Favatar.png&amp;w=256&amp;q=75 1x, /_next/image?url=%2Fstatic%2Fimages%2Favatar.png&amp;w=384&amp;q=75 2x"
-                src="/_next/image?url=%2Fstatic%2Fimages%2Favatar.png&amp;w=384&amp;q=75"
+                src="${image}"
                 style="color: transparent;"
             />
             <h3 class="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">Tails Azimuth</h3>
@@ -63,12 +63,11 @@ class About {
             </div>
         </div>
         <div class="prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2">
-            <p>Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.</p>
-            <p>He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.</p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel
-                metus tempus vulputate.
-            </p>
+            <p>Hi, I'm Dhruvang, a passionate software engineer with expertise in building web applications that combine creativity and functionality. Over the years, I've worked with a wide range of technologies, including JavaScript, React, Node.js, and more, to deliver scalable and efficient solutions.</p>
+            <p>I love solving complex problems and crafting user-friendly experiences. Whether it's designing a Kanban board, creating private chat platforms, or implementing headless e-commerce solutions, I thrive on bringing ideas to life through code.</p>
+            <p>Beyond coding, I enjoy learning about emerging technologies and exploring innovative ways to tackle real-world challenges. My blog is where I share insights, tutorials, and my journey as a developer.</p>
+            <p>When I'm not coding, you'll find me brainstorming new project ideas or diving into topics like WebAssembly and software architecture.</p>
+            <p>Let's connect and build something amazing!</p>
         </div>
     </div>
 </div>

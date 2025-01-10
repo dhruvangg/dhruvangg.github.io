@@ -52,23 +52,27 @@ class Blog {
             </li>`
     }
 
-    render({ pagination }) {
+    render({ title, pagination }) {
         const currentPage = pagination.pageNumber + 1;
         const totalPages = pagination.pages.length;
 
         const posts = pagination.items.map((post) => this.createItem(post.data, post.url)).join(""); 
-        return `
-        <h1>Blog</h1>
-        <ul class="divide-y divide-gray-200 dark:divide-gray-700">${posts}</ul>
-        <div class="space-y-2 pb-8 pt-6 md:space-y-5">
-            <nav class="flex justify-between">
-            ${pagination.href.previous ? `<a class="break-words" rel="prev" href="${pagination.href.previous}">Previous</a>` : `<button class="cursor-auto disabled:opacity-50" disabled="">Previous</button>`}
-            <div class="text-center">
-                Page ${currentPage} of ${totalPages}
+        return `<div class="divide-y divide-gray-200 dark:divide-gray-700">
+            <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+                <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">${title}</h1>
+                <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">Insights and Ideas: Exploring the World of Software Engineering</p>
             </div>
-            ${pagination.href.next ? `<a class="break-words" rel="next" href="${pagination.href.next}">Next</a>` : `<button class="cursor-auto disabled:opacity-50" disabled="">Next</button>`}
-            </nav>
-        </div>
+            <ul class="divide-y divide-gray-200 dark:divide-gray-700">${posts}</ul>
+            <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+                <nav class="flex justify-between">
+                ${pagination.href.previous ? `<a class="break-words" rel="prev" href="${pagination.href.previous}">Previous</a>` : `<button class="cursor-auto disabled:opacity-50" disabled="">Previous</button>`}
+                <div class="text-center">
+                    Page ${currentPage} of ${totalPages}
+                </div>
+                ${pagination.href.next ? `<a class="break-words" rel="next" href="${pagination.href.next}">Next</a>` : `<button class="cursor-auto disabled:opacity-50" disabled="">Next</button>`}
+                </nav>
+            </div>
+            </div>
         </div>`;
     }
 }

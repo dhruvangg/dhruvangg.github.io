@@ -17,6 +17,7 @@
     "concurrently": "^9.1.2"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^6.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
     "dayjs": "^1.11.13",

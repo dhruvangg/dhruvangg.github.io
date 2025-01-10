@@ -13,20 +13,20 @@ class Projects {
                 description: "The Anonymous Private Chat Application allows users to create or join private chat rooms effortlessly—no login, no accounts, just instant messaging! This app is designed for fast, secure, and real-time communication with an emphasis on simplicity and user privacy.",
                 source_code: "https://github.com/dhruvangg/private-chat",
             }, {
-                title: "To do Application",
+                title: "Notes",
                 description: "A simple to-do list application that allows users to create, edit, and delete tasks. It provides a visual representation of tasks, allowing users to track progress and prioritize their work.",
                 preview_link: "https://dhruvangg.github.io/notes/",
                 source_code: "https://github.com/dhruvangg/notes",
-            }, {
-                title: "Finance Guide",
-                description: "MoneyInsightful is your trusted companion on the journey to financial literacy, offering a user-friendly platform tailored for beginners to intermediate learners. Whether you're just starting or looking to enhance your financial acumen, MoneyMinds provides accessible and digestible content to help you grasp the essentials of financial planning.",
-                preview_link: "https://moneyinsightful.vercel.app/",
-                source_code: "https://github.com/dhruvangg/moneyinsightful",
             }, {
                 title: "Headless Ecommerce",
                 description: "Ecommerce Website build on top of Shopify API. It provides a simple and user-friendly interface for exploring products, order goods and checkout.",
                 preview_link: "https://dhruvangg.github.io/headless-shopify",
                 source_code: "https://github.com/dhruvangg/headless-shopify",
+            }, {
+                title: "Finance Guide",
+                description: "MoneyInsightful is your trusted companion on the journey to financial literacy, offering a user-friendly platform tailored for beginners to intermediate learners. Whether you're just starting or looking to enhance your financial acumen, MoneyMinds provides accessible and digestible content to help you grasp the essentials of financial planning.",
+                preview_link: "https://moneyinsightful.vercel.app/",
+                source_code: "https://github.com/dhruvangg/moneyinsightful",
             }]
         };
     }
@@ -38,7 +38,12 @@ class Projects {
                 <!-- Image here -->
                 <div class="p-6">
                     <h2 class="mb-3 text-2xl font-bold leading-8 tracking-tight text-indigo-500">
-                        <a class="break-words" target="_blank" rel="noopener noreferrer" href="${preview_link ? preview_link : source_code}" aria-label="Link to ${title}">${title}</a>
+                        <a class="break-words flex items-center" target="_blank" rel="noopener noreferrer" href="${preview_link ? preview_link : source_code}" aria-label="Link to ${title}">
+                        ${title}
+                        ${preview_link ? `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 ml-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>`: ''}
+                        </a>
                     </h2>
                     <p class="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">
                         ${description}
@@ -57,11 +62,11 @@ class Projects {
         </div>`;
     }
 
-    render({projects}) {
+    render({ projects }) {
         return `<div class="divide-y divide-gray-200 dark:divide-gray-700">
         <div class="space-y-2 pb-8 pt-6 md:space-y-5">
             <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">Projects</h1>
-            <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">Showcase your projects with a hero image (16 x 9)</p>
+            <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">Showcasing Innovative Solutions: Explore My Projects</p>
         </div>
         <div class="container py-12">
             <div class="-m-4 flex flex-wrap">
