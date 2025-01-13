@@ -2,49 +2,92 @@
     <!DOCTYPE html>
     <html lang="en">
     <head>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to Dhruvang's Dev Blog, where I share insights, tutorials, and experiences from my journey as a software engineer. Discover articles on JavaScript, React, Node.js, web development best practices, and more!">
+        <meta name="keywords" content="javascript, react, node.js, web development, best practices, blogs, insights, tutorials, creativity, solutions">
+        <meta name="author" content="Dhruvang Gajjar">
+        <meta name="language" content="English">
+        <meta name="copyright" content="Dhruvang Gajjar">
+        <meta name="publisher" content="Dhruvang Gajjar">
+
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+
+        <meta property="og:title" content="🚀 Master the Art of Sequential Task Execution in JavaScript 🛠️">
+        <meta property="og:description" content="Welcome to Dhruvang's Dev Blog, where I share insights, tutorials, and experiences from my journey as a software engineer. Discover articles on JavaScript, React, Node.js, web development best practices, and more!">
+        <meta property="og:url" content="https://dhruvangg.github.io/">
+        <meta property="og:image" content="https://dhruvangg.github.io/images/profile.jpg">
+
+        <meta property="twitter:title" content="🚀 Master the Art of Sequential Task Execution in JavaScript 🛠️">
+        <meta property="twitter:description" content="Welcome to Dhruvang's Dev Blog, where I share insights, tutorials, and experiences from my journey as a software engineer. Discover articles on JavaScript, React, Node.js, web development best practices, and more!">
+        <meta property="twitter:url" content="undefined">
+        <meta property="twitter:image" content="https://dhruvangg.github.io/images/profile.jpg">
+        <meta property="twitter:card" content="summary_large_image">
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        
         <title>🚀 Master the Art of Sequential Task Execution in JavaScript 🛠️</title>
         <link rel="stylesheet" href="/assets/styles.css">
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WN9QWB8');</script>
+        <!-- End Google Tag Manager -->
+           
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "🚀 Master the Art of Sequential Task Execution in JavaScript 🛠️",
+        "description": "Ever wondered how to execute multiple tasks one after another in JavaScript without breaking a sweat? 🤔 Promises have you covered!",
+        "author": {
+            "@type": "Person",
+            "name": "Dhruvang Gajjar"
+        },
+        "datePublished": "2025-01-03",
+        "dateModified": "2025-01-03",
+        "url": "https://dhruvangg.github.io/posts/master-the-art-of-sequential-task-execution-in-javascript/"
+        }
+        </script>
     </head>
     <body>
         <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
-            <header class="flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10">
-                <a class="break-words" aria-label="TailwindBlog" href="/">
-                    <div class="flex items-center justify-between">
-                        <div class="hidden h-6 text-2xl font-semibold sm:block">DHRUVANG</div>
-                    </div>
-                </a>
-                <div class="flex items-center space-x-4 leading-5 sm:space-x-6">
-                    <div class="no-scrollbar hidden max-w-40 items-center space-x-4 overflow-x-auto sm:flex sm:space-x-6 md:max-w-72 lg:max-w-96">
-                        <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/blog">Blog</a>
-                        <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/tags">Tags</a>
-                        <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/projects">Projects</a>
-                        <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/about">About</a>
-                    </div>
-                    <button aria-label="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
-                        </svg>
-                    </button>
-                    <div class="mr-5 flex items-center">
-                        <div class="relative inline-block text-left" data-headlessui-state="">
-                            <div class="flex items-center justify-center hover:text-primary-500 dark:hover:text-primary-400">
-                            <button aria-label="Theme switcher" id="headlessui-menu-button-:Rtpkqlb:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="group:hover:text-gray-100 h-6 w-6">
-                                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                            </div>
-                        </div>
-                    </div>
-                    <button aria-label="Toggle Menu" class="sm:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
+            <header class="flex items-center w-full bg-white dark:bg-transparent justify-between py-10">
+        <a class="break-words" aria-label="TailwindBlog" href="/">
+            <div class="flex items-center justify-between">
+                <div class="mr-3">
+                    <svg width="53.87" height="43.61" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>DHRUVANG</title>
+                        <desc>Created with Sketch.</desc>
+                        <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="DHRUVANG" fill="#212121" fill-rule="nonzero">
+                                <path fill="#6366f1" d="M8.06561801,18.9432081 L14.565618,4.44320807 C14.7350545,4.06523433 15.1788182,3.8961815 15.5567919,4.06561801 C15.9032679,4.2209348 16.0741922,4.60676263 15.9697642,4.9611247 L15.934382,5.05679193 L9.43438199,19.5567919 C9.26494549,19.9347657 8.82118181,20.1038185 8.44320807,19.934382 C8.09673215,19.7790652 7.92580781,19.3932374 8.03023576,19.0388753 L8.06561801,18.9432081 L14.565618,4.44320807 L8.06561801,18.9432081 Z M2.21966991,11.4696699 L6.46966991,7.21966991 C6.76256313,6.9267767 7.23743687,6.9267767 7.53033009,7.21966991 C7.79659665,7.48593648 7.8208027,7.90260016 7.60294824,8.19621165 L7.53033009,8.28033009 L3.81066017,12 L7.53033009,15.7196699 C7.8232233,16.0125631 7.8232233,16.4874369 7.53033009,16.7803301 C7.26406352,17.0465966 6.84739984,17.0708027 6.55378835,16.8529482 L6.46966991,16.7803301 L2.21966991,12.5303301 C1.95340335,12.2640635 1.9291973,11.8473998 2.14705176,11.5537883 L2.21966991,11.4696699 L6.46966991,7.21966991 L2.21966991,11.4696699 Z M16.4696699,7.21966991 C16.7359365,6.95340335 17.1526002,6.9291973 17.4462117,7.14705176 L17.5303301,7.21966991 L21.7803301,11.4696699 C22.0465966,11.7359365 22.0708027,12.1526002 21.8529482,12.4462117 L21.7803301,12.5303301 L17.5303301,16.7803301 C17.2374369,17.0732233 16.7625631,17.0732233 16.4696699,16.7803301 C16.2034034,16.5140635 16.1791973,16.0973998 16.3970518,15.8037883 L16.4696699,15.7196699 L20.1893398,12 L16.4696699,8.28033009 C16.1767767,7.98743687 16.1767767,7.51256313 16.4696699,7.21966991 Z" id="🎨-Color"></path>
+                            </g>
+                        </g>
+                    </svg>          
                 </div>
-                </header>
+                <div class="hidden text-2xl font-semibold sm:block">DHRUVANG</div>
+            </div>
+        </a>
+        <div class="flex items-center space-x-4 leading-5 sm:space-x-6">
+            <div class="no-scrollbar flex items-center space-x-4 sm:flex sm:space-x-6 md:max-w-72 lg:max-w-96">
+                <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/blog">Blog</a>
+                <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/projects">Projects</a>
+                <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/about">About</a>
+            </div>
+            <button aria-label="Toggle Menu" class="hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400">
+                    <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+   
             <main class="mb-auto">
             <div class="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
                 <header class="py-12">
@@ -138,14 +181,39 @@ All Tasks Completed
                 </article>
                 <aside class="flex-1 p-6">
                     <div class="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:col-start-4 xl:divide-y-0">
-                        <div class="prose dark:prose-invert"><h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Tags</h2>
-                        <a class="capitalize mr-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/featured">featured</a> <a class="capitalize mr-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/post">post</a></div>
-                        </div>
-                    </aside></section></div> 
-                
-                </main></section>
-                
-            
+                        <ul>
+                            <li class="pb-4">
+                                <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">Tags</h3>
+                                <div class="flex flex-wrap flex-row">
+                                <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/featured">featured</a> <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/post">post</a>
+                                </div>
+                            </li>
+                            <li class="pb-4">
+                                <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">Share</h3>
+                                <div class="flex flex-wrap flex-row">
+                                    <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https://dhruvangg.github.io/posts/master-the-art-of-sequential-task-execution-in-javascript/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                                            <path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
+                                        </svg>
+                                        </a>
+                                    <a target="_blank" href="https://wa.me/?text=🚀 Master the Art of Sequential Task Execution in JavaScript 🛠️!%20https://dhruvangg.github.io/posts/master-the-art-of-sequential-task-execution-in-javascript/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                                            <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+                                    <a target="_blank" href="https://twitter.com/intent/tweet?url=https://dhruvangg.github.io/posts/master-the-art-of-sequential-task-execution-in-javascript/&text=🚀 Master the Art of Sequential Task Execution in JavaScript 🛠️" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                                            <path fill="#212121" fill-rule="evenodd" d="M38,42H10c-2.209,0-4-1.791-4-4V10c0-2.209,1.791-4,4-4h28	c2.209,0,4,1.791,4,4v28C42,40.209,40.209,42,38,42z" clip-rule="evenodd"></path><path fill="#fff" d="M34.257,34h-6.437L13.829,14h6.437L34.257,34z M28.587,32.304h2.563L19.499,15.696h-2.563 L28.587,32.304z"></path><polygon fill="#fff" points="15.866,34 23.069,25.656 22.127,24.407 13.823,34"></polygon><polygon fill="#fff" points="24.45,21.721 25.355,23.01 33.136,14 31.136,14"></polygon>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                     
+                </aside>
+                </section>
+                </div>
+            </main>
             
             <footer>
                 <div class="mt-16 flex flex-col items-center">
@@ -180,7 +248,7 @@ All Tasks Completed
                     </div>
                 </div>
             </footer>
-        
+        </section>
     </body>
     </html>
     
