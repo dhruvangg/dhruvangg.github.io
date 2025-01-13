@@ -23,11 +23,11 @@ class About {
                 src="${image}"
                 style="color: transparent;"
             />
-            <h3 class="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">Tails Azimuth</h3>
-            <div class="text-gray-500 dark:text-gray-400">Professor of Atmospheric Science</div>
-            <div class="text-gray-500 dark:text-gray-400">Stanford University</div>
+            <h3 class="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">Dhruvang Gajjar</h3>
+            <div class="text-gray-500 dark:text-gray-400">Senior Software Enginner</div>
+            <div class="text-gray-500 dark:text-gray-400">Cygnet.one</div>
             <div class="flex space-x-3 pt-6">
-                <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="mailto:address@yoursite.com">
+                <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="mailto:dhurvangg@gmail.com">
                     <span class="sr-only">mail</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-8 w-8">
                         <title>Mail</title>
@@ -35,7 +35,7 @@ class About {
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                     </svg>
                 </a>
-                <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://github.com">
+                <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvangg">
                     <span class="sr-only">github</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-8 w-8">
                         <title>GitHub</title>
@@ -44,20 +44,13 @@ class About {
                         ></path>
                     </svg>
                 </a>
-                <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com">
+                <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dhruvangg">
                     <span class="sr-only">linkedin</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-8 w-8">
                         <title>Linkedin</title>
                         <path
                             d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                         ></path>
-                    </svg>
-                </a>
-                <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://twitter.com/Twitter">
-                    <span class="sr-only">x</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-8 w-8">
-                        <title>X</title>
-                        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
                     </svg>
                 </a>
             </div>
