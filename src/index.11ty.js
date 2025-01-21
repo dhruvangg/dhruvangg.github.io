@@ -44,9 +44,11 @@ class Home {
     }
 
 
-
     render({ name, collections }) {
-        const posts = collections.featured.map((post) => this.createItem(post.data, post.url)).join("");
+
+        const sortedPosts = collections.featured.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+
+        const posts = sortedPosts.map((post) => this.createItem(post.data, post.url)).join("");
         return `<div class="divide-y divide-gray-200 dark:divide-gray-700">
                 <div class="space-y-2 pb-8 pt-6 md:space-y-5">
                     <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">Latest</h1>
