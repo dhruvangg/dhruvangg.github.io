@@ -15,20 +15,20 @@
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
 
-        <meta property="og:title" content="👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀">
-        <meta property="og:description" content="When working with file I/O operations in Node.js, choosing the right file reading method is crucial for optimizing performance and ensuring smooth execution of your application.">
+        <meta property="og:title" content="Lesser-Known CSS Tips and Tricks for Frontend Developers">
+        <meta property="og:description" content="CSS is an essential tool for frontend developers, but it’s easy to overlook some of its lesser-known features and techniques. These hidden gems can improve your workflows, enhance user experience, and solve tricky design problems.">
         <meta property="og:url" content="https://dhruvangg.github.io/">
         <meta property="og:image" content="https://dhruvangg.github.io/images/profile.jpg">
 
-        <meta property="twitter:title" content="👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀">
-        <meta property="twitter:description" content="When working with file I/O operations in Node.js, choosing the right file reading method is crucial for optimizing performance and ensuring smooth execution of your application.">
+        <meta property="twitter:title" content="Lesser-Known CSS Tips and Tricks for Frontend Developers">
+        <meta property="twitter:description" content="CSS is an essential tool for frontend developers, but it’s easy to overlook some of its lesser-known features and techniques. These hidden gems can improve your workflows, enhance user experience, and solve tricky design problems.">
         <meta property="twitter:url" content="https://dhruvangg.github.io/">
         <meta property="twitter:image" content="https://dhruvangg.github.io/images/profile.jpg">
         <meta property="twitter:card" content="summary_large_image">
 
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         
-        <title>👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀</title>
+        <title>Lesser-Known CSS Tips and Tricks for Frontend Developers</title>
         <link rel="stylesheet" href="/assets/styles.css">
 
         <!-- Google Tag Manager -->
@@ -43,15 +43,15 @@
         {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀",
-        "description": "When working with file I/O operations in Node.js, choosing the right file reading method is crucial for optimizing performance and ensuring smooth execution of your application.",
+        "headline": "Lesser-Known CSS Tips and Tricks for Frontend Developers",
+        "description": "CSS is an essential tool for frontend developers, but it’s easy to overlook some of its lesser-known features and techniques. These hidden gems can improve your workflows, enhance user experience, and solve tricky design problems.",
         "author": {
             "@type": "Person",
             "name": "Dhruvang Gajjar"
         },
-        "datePublished": "2025-01-09",
-        "dateModified": "2025-01-09",
-        "url": "https://dhruvangg.github.io/posts/understanding-readfilesync-vs-readfile-nodejs/"
+        "datePublished": "2025-01-22T10:00:00.1Z",
+        "dateModified": "2025-01-22T10:00:00.1Z",
+        "url": "https://dhruvangg.github.io/posts/css-tips-and-tricks-for-frontend-developers/"
         }
         </script>
     </head>
@@ -95,67 +95,163 @@
                         <dl class="space-y-10">
                             <div>
                                 <dt class="sr-only">Published on</dt>
-                                <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"><time datetime="2023-08-05T00:00:00.000Z">Thursday January 9, 2025</time></dd>
+                                <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"><time datetime="2023-08-05T00:00:00.000Z">Wednesday January 22, 2025</time></dd>
                             </div>
                         </dl>
-                        <div><h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀</h1></div>
+                        <div><h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">Lesser-Known CSS Tips and Tricks for Frontend Developers</h1></div>
                     </div>
                 </header>
                 <section class="md:flex flex-row-reverse">
                 <article class="prose lg:prose-xl dark:prose-invert pt-6">
-                <p>When working with file I/O operations in Node.js, choosing the right file reading method is crucial for optimizing performance and ensuring smooth execution of your application. Here's a quick breakdown of three common methods and when to use each:</p>
-<ol>
-<li>readFileSync (Synchronous):
-Blocks the event loop until the file is completely read.
-Use it when you don’t need to execute further code while reading the file, and blocking is acceptable (e.g., startup tasks or simple scripts).</li>
-</ol>
-<pre><code class="language-javascript">import { readFileSync } from &quot;node:fs&quot;;
-
-try {
-  const data = fs.readFileSync(&quot;example.txt&quot;, &quot;utf8&quot;);
-  console.log(&quot;File contents:&quot;, data);
-} catch (err) {
-  console.error(&quot;Error reading file:&quot;, err);
+                <p>CSS is an essential tool for frontend developers, but it’s easy to overlook some of its lesser-known features and techniques. These hidden gems can improve your workflows, enhance user experience, and solve tricky design problems. Here’s a collection of CSS tips and tricks you might not know about but should definitely explore.</p>
+<hr>
+<h2>1. <strong>The <code>:is()</code> Pseudo-Class</strong></h2>
+<p>Simplify selectors by grouping them together using <code>:is()</code>. This reduces repetition and makes your CSS more maintainable.</p>
+<pre><code class="language-css">:is(h1, h2, h3) {
+    color: darkblue;
+    font-weight: bold;
 }
 </code></pre>
-<ol start="2">
-<li>readFile (Asynchronous with Callback):
-Non-blocking operation: allows other tasks to run while waiting for the file to be read.
-Use it when you need to handle other tasks concurrently while reading the file.</li>
-</ol>
-<pre><code class="language-javascript">const fs = require('fs');
+<p>Instead of writing separate rules for <code>h1</code>, <code>h2</code>, and <code>h3</code>, the <code>:is()</code> pseudo-class combines them into one.</p>
+<hr>
+<h2>2. <strong>The Power of <code>clamp()</code></strong></h2>
+<p>The <code>clamp()</code> function helps create responsive values that stay within a defined range.</p>
+<pre><code class="language-css">font-size: clamp(1rem, 2.5vw, 3rem);
+</code></pre>
+<p>Here, the font size starts at <code>1rem</code>, scales with the viewport width (<code>2.5vw</code>), and stops growing at <code>3rem</code>.</p>
+<hr>
+<h2>3. <strong>CSS Variables with Default Fallbacks</strong></h2>
+<p>Use CSS variables with fallback values for greater flexibility and error-proofing.</p>
+<pre><code class="language-css">:root {
+    --primary-color: #007bff;
+}
 
-fs.writeFile('output.txt', 'Hello, World!', (err) =&gt; {
-    if (err) {
-        console.error('Error writing file:', err);
-    } else {
-        console.log('File written successfully!');
+button {
+    background-color: var(--primary-color, #0000ff); /* Falls back to blue */
+}
+</code></pre>
+<hr>
+<h2>4. <strong><code>aspect-ratio</code> for Responsive Elements</strong></h2>
+<p>Maintain a consistent aspect ratio for elements without relying on padding hacks.</p>
+<pre><code class="language-css">img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+}
+</code></pre>
+<p>This ensures the image maintains a 16:9 ratio, regardless of its size.</p>
+<hr>
+<h2>5. <strong>Centering Made Easy with <code>place-items</code></strong></h2>
+<p>Use <code>place-items</code> to center content in a grid or flex container effortlessly.</p>
+<pre><code class="language-css">.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+</code></pre>
+<p>This centers both horizontally and vertically in just one line.</p>
+<hr>
+<h2>6. <strong>Hover Within a Parent with <code>:has()</code></strong></h2>
+<p>Style parent elements based on child interactions using the <code>:has()</code> pseudo-class.</p>
+<pre><code class="language-css">.card:has(:hover) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+</code></pre>
+<p>Here, the card gets a shadow effect when any of its children are hovered.</p>
+<hr>
+<h2>7. <strong>The <code>:focus-within</code> Pseudo-Class</strong></h2>
+<p>Style parent elements when a child element receives focus.</p>
+<pre><code class="language-css">.form-group:focus-within {
+    border: 2px solid #007bff;
+}
+</code></pre>
+<p>This is useful for highlighting form fields during user interaction.</p>
+<hr>
+<h2>8. <strong>Custom Borders with <code>border-image</code></strong></h2>
+<p>Apply intricate patterns or gradients as borders using <code>border-image</code>.</p>
+<pre><code class="language-css">div {
+    border: 10px solid;
+    border-image: linear-gradient(to right, red, blue) 1;
+}
+</code></pre>
+<hr>
+<h2>9. <strong>Animating Gradients</strong></h2>
+<p>Create mesmerizing gradient animations with <code>background-position</code> or <code>background-size</code>.</p>
+<pre><code class="language-css">@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
     }
-});
-</code></pre>
-<ol start="3">
-<li>fs.promises.readFile (Promise-based, with async/await):
-Similar to readFile, but allows you to work with Promises and async/await for cleaner, more readable code.
-Use it when you prefer Promises or async/await for error handling and cleaner syntax.</li>
-</ol>
-<pre><code class="language-javascript">import { readFile } from 'node:fs/promises'
+    100% {
+        background-position: 100% 50%;
+    }
+}
 
-readFile('sample.txt', 'utf8')
-    .then(data =&gt; console.log(data))
-    .catch(err =&gt; console.error(err))
+div {
+    background: linear-gradient(270deg, #ff7eb3, #ff758c, #42a5f5);
+    background-size: 400% 400%;
+    animation: gradient 5s infinite linear;
+}
 </code></pre>
-<h3>Summary:</h3>
-<ul>
-<li>readFileSync: Use when:No further code execution is needed immediately. It's acceptable to block the event loop for the duration of the file read.</li>
-<li>readFile (callback-based) or fs.promises.readFile (Promise-based): Use when:You want to perform other tasks while the file is being read (non-blocking).You need better handling of asynchronous operations (especially with multiple tasks).</li>
-</ul>
-<p>In short:</p>
-<ul>
-<li>readFileSync = Block until file is read (best for simple scripts or single operations with no concurrent I/O).</li>
-<li>readFile / fs.promises.readFile = Allow other code to run while waiting for the file (best for handling multiple tasks or concurrent I/O operations).</li>
-</ul>
-<p>Let me know if you need more clarification!</p>
-<p>💡 Tip: In modern Node.js apps, prefer fs.promises.readFile to take full advantage of async/await for better error handling and cleaner code! 🚀</p>
+<hr>
+<h2>10. <strong>Scroll Snap for Smooth Scrolling</strong></h2>
+<p>Use <code>scroll-snap</code> to create smooth scroll experiences for carousels or lists.</p>
+<pre><code class="language-css">.carousel {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.carousel &gt; div {
+    scroll-snap-align: center;
+}
+</code></pre>
+<hr>
+<h2>11. <strong>Line Clamping for Text Overflow</strong></h2>
+<p>Limit the number of lines of text using <code>-webkit-line-clamp</code>.</p>
+<pre><code class="language-css">p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+</code></pre>
+<p>This is perfect for truncating long text.</p>
+<hr>
+<h2>12. <strong><code>filter</code> for Visual Effects</strong></h2>
+<p>Apply effects like blur or grayscale directly to elements.</p>
+<pre><code class="language-css">img {
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+img:hover {
+    filter: none;
+}
+</code></pre>
+<hr>
+<h2>13. <strong>Smooth Scroll Behavior</strong></h2>
+<p>Enable smooth scrolling for anchor links.</p>
+<pre><code class="language-css">html {
+    scroll-behavior: smooth;
+}
+</code></pre>
+<hr>
+<h2>14. <strong>Custom Pointer Cursor</strong></h2>
+<p>Create custom cursors for a unique UI experience.</p>
+<pre><code class="language-css">button {
+    cursor: url('custom-cursor.png'), pointer;
+}
+</code></pre>
+<hr>
+<h2>15. <strong>Responsive Typography with <code>ch</code> Units</strong></h2>
+<p>The <code>ch</code> unit adjusts based on the width of the <code>0</code> character, perfect for aligning text layouts.</p>
+<pre><code class="language-css">input {
+    width: 20ch;
+}
+</code></pre>
+<hr>
+<h2>Conclusion</h2>
+<p>These lesser-known CSS tips and tricks can save you time, improve performance, and enhance user experience. Incorporate them into your projects to level up your frontend development skills!</p>
 
                 </article>
                 <aside class="flex-1 p-6">
@@ -164,23 +260,23 @@ readFile('sample.txt', 'utf8')
                             <li class="pb-4">
                                 <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">Tags</h3>
                                 <div class="flex flex-wrap flex-row">
-                                <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/featured">featured</a> <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/nodejs">nodejs</a>
+                                <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/featured">featured</a> <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/frontend">frontend</a> <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/CSS">CSS</a> <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/web development">web development</a>
                                 </div>
                             </li>
                             <li class="pb-4">
                                 <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">Share</h3>
                                 <div class="flex flex-wrap flex-row">
-                                    <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https://dhruvangg.github.io/posts/understanding-readfilesync-vs-readfile-nodejs/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                    <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https://dhruvangg.github.io/posts/css-tips-and-tricks-for-frontend-developers/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                                             <path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
                                         </svg>
                                         </a>
-                                    <a target="_blank" href="https://wa.me/?text=👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀!%20https://dhruvangg.github.io/posts/understanding-readfilesync-vs-readfile-nodejs/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                    <a target="_blank" href="https://wa.me/?text=Lesser-Known CSS Tips and Tricks for Frontend Developers!%20https://dhruvangg.github.io/posts/css-tips-and-tricks-for-frontend-developers/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                                             <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
                                         </svg>
                                     </a>
-                                    <a target="_blank" href="https://twitter.com/intent/tweet?url=https://dhruvangg.github.io/posts/understanding-readfilesync-vs-readfile-nodejs/&text=👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                    <a target="_blank" href="https://twitter.com/intent/tweet?url=https://dhruvangg.github.io/posts/css-tips-and-tricks-for-frontend-developers/&text=Lesser-Known CSS Tips and Tricks for Frontend Developers" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
                                             <path fill="#212121" fill-rule="evenodd" d="M38,42H10c-2.209,0-4-1.791-4-4V10c0-2.209,1.791-4,4-4h28	c2.209,0,4,1.791,4,4v28C42,40.209,40.209,42,38,42z" clip-rule="evenodd"></path><path fill="#fff" d="M34.257,34h-6.437L13.829,14h6.437L34.257,34z M28.587,32.304h2.563L19.499,15.696h-2.563 L28.587,32.304z"></path><polygon fill="#fff" points="15.866,34 23.069,25.656 22.127,24.407 13.823,34"></polygon><polygon fill="#fff" points="24.45,21.721 25.355,23.01 33.136,14 31.136,14"></polygon>
                                         </svg>
