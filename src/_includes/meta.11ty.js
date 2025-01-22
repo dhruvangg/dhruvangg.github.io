@@ -13,13 +13,13 @@ const Meta = (data) => {
         <meta name="googlebot" content="index, follow" />
 
         <meta property="og:title" content="${data.title || data.meta.title}" />
-        <meta property="og:description" content="${data.meta.description}" />
+        <meta property="og:description" content="${data.description || data.meta.description}" />
         <meta property="og:url" content="${data.meta.url}" />
         <meta property="og:image" content="${data.ogImage || data.meta.image}" />
 
         <meta property="twitter:title" content="${data.title || data.meta.title}" />
-        <meta property="twitter:description" content="${data.meta.description}" />
-        <meta property="twitter:url" content="${data.metaurl}" />
+        <meta property="twitter:description" content="${data.description || data.meta.description}" />
+        <meta property="twitter:url" content="${data.meta.url}" />
         <meta property="twitter:image" content="${data.twitterImage || data.meta.image}" />
         <meta property="twitter:card" content="summary_large_image" />
 

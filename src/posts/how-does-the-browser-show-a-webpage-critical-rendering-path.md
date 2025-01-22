@@ -1,6 +1,5 @@
 ---
 tags: 
-    - featured
     - post
 title: "How does the browser show a webpage (Critical Rendering Path)?"
 date: "2025-01-10"

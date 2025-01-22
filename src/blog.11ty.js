@@ -7,7 +7,7 @@ class Blog {
             layout: "layout.11ty.js",
             pagination: {
                 data: "collections.blogPosts",
-                size: 3,
+                size: 8,
                 alias: "posts",
                 addAllPagesToCollections: true,
                 permalink: function (data) {

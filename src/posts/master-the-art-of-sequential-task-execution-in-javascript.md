@@ -1,6 +1,5 @@
 ---
 tags: 
-    - featured
     - post
 title: "🚀 Master the Art of Sequential Task Execution in JavaScript 🛠️"
 date: "2025-01-03"
