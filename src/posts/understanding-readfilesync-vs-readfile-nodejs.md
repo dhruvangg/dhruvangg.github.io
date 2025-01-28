@@ -1,6 +1,5 @@
 ---
 tags: 
-    - featured
     - nodejs
 title: "👉 Understanding readFileSync vs readFile vs fs.promises.readFile in Node.js 🚀"
 date: "2025-01-09"

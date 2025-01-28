@@ -1,6 +1,5 @@
 ---
 tags: 
-    - featured
     - frontend
     - CSS
     - web development
