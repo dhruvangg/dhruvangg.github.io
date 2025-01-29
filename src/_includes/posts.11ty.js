@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import Meta from "./meta.11ty.js";
 import Header from "./header.11ty.js";
 
 const Layout = (data) => {
@@ -9,7 +8,42 @@ const Layout = (data) => {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        ${Meta(data)}   
+        <title>${data.title}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="${data.meta.description}" />
+        <meta name="keywords" content="${data.meta.keywords}" />
+        <meta name="author" content="${data.meta.author}" />
+        <meta name="language" content="English" />
+        <meta name="copyright" content="${data.meta.author}" />
+        <meta name="publisher" content="${data.meta.author}" />
+
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+
+        <meta property="og:title" content="${data.title}" />
+        <meta property="og:description" content="${data.description}" />
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="${data.meta.url + data.page.url}" />
+        <meta property="og:image" content="${data.featuredImage || data.meta.image}" />
+
+        <meta property="twitter:title" content="${data.title}" />
+        <meta property="twitter:description" content="${data.description}" />
+        <meta property="twitter:url" content="${data.meta.url + data.page.url}" />
+        <meta property="twitter:image" content="${data.meta.url + data.featuredImage || data.meta.image}" />
+        <meta property="twitter:card" content="summary_large_image" />
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">  
+        <link rel="stylesheet" href="/assets/styles.css">
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WN9QWB8');</script>
+        <!-- End Google Tag Manager -->
+
         <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -27,6 +61,10 @@ const Layout = (data) => {
         </script>
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
             ${Header()}
             <main class="mb-auto">
