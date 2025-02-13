@@ -311,7 +311,3 @@ Use `useSearchParams`:
 const [searchParams] = useSearchParams();
 console.log(searchParams.get("id"));
 ```
-
----
-
-These questions should help you **prepare well for a React Router interview**. Let me know if you need more explanations!
