@@ -1,0 +1,418 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>React Router Interview Guide: 20 Must-Know Questions & Answers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to Dhruvang's Dev Blog, where I share insights, tutorials, and experiences from my journey as a software engineer. Discover articles on JavaScript, React, Node.js, web development best practices, and more!">
+        <meta name="keywords" content="javascript, react, node.js, web development, best practices, blogs, insights, tutorials, creativity, solutions">
+        <meta name="author" content="Dhruvang Gajjar">
+        <meta name="language" content="English">
+        <meta name="copyright" content="Dhruvang Gajjar">
+        <meta name="publisher" content="Dhruvang Gajjar">
+
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+
+        <meta property="og:title" content="React Router Interview Guide: 20 Must-Know Questions & Answers">
+        <meta property="og:description" content="Are you preparing for a React.js interview? One of the most commonly asked topics is React Router, and mastering it can give you a solid edge.">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://dhruvangg.github.io/posts/react-router-interview-guide/">
+        <meta property="og:image" content="https://dhruvangg.github.ioundefined">
+
+        <meta property="twitter:title" content="React Router Interview Guide: 20 Must-Know Questions & Answers">
+        <meta property="twitter:description" content="Are you preparing for a React.js interview? One of the most commonly asked topics is React Router, and mastering it can give you a solid edge.">
+        <meta property="twitter:url" content="https://dhruvangg.github.io/posts/react-router-interview-guide/">
+        <meta property="twitter:image" content="https://dhruvangg.github.ioundefined">
+        <meta property="twitter:card" content="summary_large_image">
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">  
+        <link rel="stylesheet" href="/assets/styles.css">
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WN9QWB8');</script>
+        <!-- End Google Tag Manager -->
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React Router Interview Guide: 20 Must-Know Questions & Answers",
+        "description": "Are you preparing for a React.js interview? One of the most commonly asked topics is React Router, and mastering it can give you a solid edge.",
+        "author": {
+            "@type": "Person",
+            "name": "Dhruvang Gajjar"
+        },
+        "datePublished": "2025-02-13T10:00:00.1Z",
+        "dateModified": "2025-02-13T10:00:00.1Z",
+        "url": "https://dhruvangg.github.io/posts/react-router-interview-guide/"
+        }
+        </script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9QWB8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+            <header class="flex items-center w-full bg-white dark:bg-transparent justify-between py-10">
+        <a class="break-words" aria-label="TailwindBlog" href="/">
+            <div class="flex items-center justify-between">
+                <div class="mr-3">
+                    <svg width="53.87" height="43.61" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>DHRUVANG</title>
+                        <desc>Created with Sketch.</desc>
+                        <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="DHRUVANG" fill="#212121" fill-rule="nonzero">
+                                <path fill="#6366f1" d="M8.06561801,18.9432081 L14.565618,4.44320807 C14.7350545,4.06523433 15.1788182,3.8961815 15.5567919,4.06561801 C15.9032679,4.2209348 16.0741922,4.60676263 15.9697642,4.9611247 L15.934382,5.05679193 L9.43438199,19.5567919 C9.26494549,19.9347657 8.82118181,20.1038185 8.44320807,19.934382 C8.09673215,19.7790652 7.92580781,19.3932374 8.03023576,19.0388753 L8.06561801,18.9432081 L14.565618,4.44320807 L8.06561801,18.9432081 Z M2.21966991,11.4696699 L6.46966991,7.21966991 C6.76256313,6.9267767 7.23743687,6.9267767 7.53033009,7.21966991 C7.79659665,7.48593648 7.8208027,7.90260016 7.60294824,8.19621165 L7.53033009,8.28033009 L3.81066017,12 L7.53033009,15.7196699 C7.8232233,16.0125631 7.8232233,16.4874369 7.53033009,16.7803301 C7.26406352,17.0465966 6.84739984,17.0708027 6.55378835,16.8529482 L6.46966991,16.7803301 L2.21966991,12.5303301 C1.95340335,12.2640635 1.9291973,11.8473998 2.14705176,11.5537883 L2.21966991,11.4696699 L6.46966991,7.21966991 L2.21966991,11.4696699 Z M16.4696699,7.21966991 C16.7359365,6.95340335 17.1526002,6.9291973 17.4462117,7.14705176 L17.5303301,7.21966991 L21.7803301,11.4696699 C22.0465966,11.7359365 22.0708027,12.1526002 21.8529482,12.4462117 L21.7803301,12.5303301 L17.5303301,16.7803301 C17.2374369,17.0732233 16.7625631,17.0732233 16.4696699,16.7803301 C16.2034034,16.5140635 16.1791973,16.0973998 16.3970518,15.8037883 L16.4696699,15.7196699 L20.1893398,12 L16.4696699,8.28033009 C16.1767767,7.98743687 16.1767767,7.51256313 16.4696699,7.21966991 Z" id="🎨-Color"></path>
+                            </g>
+                        </g>
+                    </svg>          
+                </div>
+                <div class="hidden text-2xl font-semibold sm:block">DHRUVANG</div>
+            </div>
+        </a>
+        <div class="flex items-center space-x-4 leading-5 sm:space-x-6">
+            <div class="no-scrollbar flex items-center space-x-4 sm:flex sm:space-x-6 md:max-w-72 lg:max-w-96">
+                <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/blog">Blog</a>
+                <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/projects">Projects</a>
+                <a class="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" href="/about">About</a>
+            </div>
+            <button aria-label="Toggle Menu" class="hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400">
+                    <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+   
+            <main class="mb-auto">
+            <div class="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+                <header class="py-12">
+                    <div class="space-y-1 text-center">
+                        <dl class="space-y-10">
+                            <div>
+                                <dt class="sr-only">Published on</dt>
+                                <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"><time datetime="2023-08-05T00:00:00.000Z">Thursday February 13, 2025</time></dd>
+                            </div>
+                        </dl>
+                        <div><h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">React Router Interview Guide: 20 Must-Know Questions & Answers</h1></div>
+                    </div>
+                </header>
+                <section class="md:flex flex-row-reverse">
+                <article class="prose lg:prose-xl dark:prose-invert pt-6">
+                <h3><strong>Basic Questions</strong></h3>
+<h4><strong>1. What is React Router? Why do we use it?</strong></h4>
+<p><strong>Answer:</strong><br>
+React Router is a standard library for routing in React applications. It allows navigation between different components without reloading the page, making it useful for building <strong>single-page applications (SPAs)</strong>.</p>
+<hr>
+<h4><strong>2. How does React Router differ from traditional navigation methods?</strong></h4>
+<p><strong>Answer:</strong><br>
+Traditional navigation reloads the entire page, whereas React Router uses <strong>client-side routing</strong>, updating only the required parts of the UI, making navigation faster and smoother.</p>
+<hr>
+<h4><strong>3. What are the different types of routers in React Router?</strong></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>BrowserRouter</strong> (uses HTML5 history API)</li>
+<li><strong>HashRouter</strong> (uses URL hash for routing, e.g., <code>/#/about</code>)</li>
+<li><strong>MemoryRouter</strong> (keeps the history in memory, used in tests)</li>
+<li><strong>StaticRouter</strong> (used for server-side rendering)</li>
+</ul>
+<hr>
+<h4><strong>4. What is the difference between <code>&lt;BrowserRouter&gt;</code> and <code>&lt;HashRouter&gt;</code>?</strong></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>BrowserRouter</strong>: Uses clean URLs (<code>/about</code>, <code>/contact</code>). Requires server-side configuration to handle routes.</li>
+<li><strong>HashRouter</strong>: Uses <code>#</code> in URLs (<code>/#/about</code>). Works without server configuration but is less SEO-friendly.</li>
+</ul>
+<hr>
+<h4><strong>5. How do you define a basic route in React Router?</strong></h4>
+<p><strong>Answer:</strong><br>
+You define routes using <code>&lt;Route&gt;</code> inside <code>&lt;Routes&gt;</code>:</p>
+<pre><code class="language-jsx">import { BrowserRouter, Routes, Route } from &quot;react-router-dom&quot;;
+import Home from &quot;./Home&quot;;
+import About from &quot;./About&quot;;
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+        &lt;Route path=&quot;/about&quot; element={&lt;About /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+export default App;
+</code></pre>
+<hr>
+<h3><strong>Intermediate Questions</strong></h3>
+<h4><strong>6. How do you create nested routes in React Router?</strong></h4>
+<p><strong>Answer:</strong><br>
+Use the <code>&lt;Outlet&gt;</code> component in a parent route:</p>
+<pre><code class="language-jsx">import { BrowserRouter, Routes, Route, Outlet } from &quot;react-router-dom&quot;;
+
+function Dashboard() {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Dashboard&lt;/h2&gt;
+      &lt;Outlet /&gt; {/* This renders child routes */}
+    &lt;/div&gt;
+  );
+}
+
+function Stats() {
+  return &lt;h3&gt;Stats Page&lt;/h3&gt;;
+}
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/dashboard&quot; element={&lt;Dashboard /&gt;}&gt;
+          &lt;Route path=&quot;stats&quot; element={&lt;Stats /&gt;} /&gt;
+        &lt;/Route&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code></pre>
+<p>Navigating to <code>/dashboard/stats</code> will render the <code>Stats</code> component inside <code>Dashboard</code>.</p>
+<hr>
+<h4><strong>7. What is the purpose of <code>useParams</code>?</strong></h4>
+<p><strong>Answer:</strong><br>
+<code>useParams</code> extracts dynamic route parameters.</p>
+<pre><code class="language-jsx">import { useParams } from &quot;react-router-dom&quot;;
+
+function User() {
+  let { id } = useParams();
+  return &lt;h1&gt;User ID: {id}&lt;/h1&gt;;
+}
+</code></pre>
+<p>If the route is <code>/user/5</code>, it will display <code>User ID: 5</code>.</p>
+<hr>
+<h4><strong>8. How do you navigate programmatically in React Router?</strong></h4>
+<p><strong>Answer:</strong><br>
+Use <code>useNavigate</code> hook:</p>
+<pre><code class="language-jsx">import { useNavigate } from &quot;react-router-dom&quot;;
+
+function Home() {
+  const navigate = useNavigate();
+  return &lt;button onClick={() =&gt; navigate(&quot;/about&quot;)}&gt;Go to About&lt;/button&gt;;
+}
+</code></pre>
+<hr>
+<h4><strong>9. What is the difference between <code>&lt;Link&gt;</code> and <code>&lt;NavLink&gt;</code>?</strong></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong><code>&lt;Link&gt;</code></strong>: Used for navigation without reloading the page.</li>
+<li><strong><code>&lt;NavLink&gt;</code></strong>: Works like <code>&lt;Link&gt;</code> but applies an <code>active</code> class when the link matches the current route.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-jsx">&lt;NavLink to=&quot;/about&quot; className={({ isActive }) =&gt; isActive ? &quot;active-link&quot; : &quot;&quot;}&gt;
+  About
+&lt;/NavLink&gt;
+</code></pre>
+<hr>
+<h4><strong>10. What are dynamic routes, and how do you define them?</strong></h4>
+<p><strong>Answer:</strong><br>
+Dynamic routes contain parameters:</p>
+<pre><code class="language-jsx">&lt;Route path=&quot;/product/:id&quot; element={&lt;Product /&gt;} /&gt;
+</code></pre>
+<hr>
+<h4><strong>11. What is <code>useNavigate</code>, and how does it differ from <code>useHistory</code>?</strong></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><code>useNavigate</code> (React Router v6) replaces <code>useHistory</code> from v5.</li>
+<li>Instead of <code>.push()</code>, we use <code>.navigate()</code>:</li>
+</ul>
+<pre><code class="language-jsx">const navigate = useNavigate();
+navigate(&quot;/home&quot;);
+</code></pre>
+<hr>
+<h4><strong>12. How do you handle 404 pages?</strong></h4>
+<p><strong>Answer:</strong><br>
+Use a wildcard <code>*</code> route:</p>
+<pre><code class="language-jsx">&lt;Route path=&quot;*&quot; element={&lt;NotFound /&gt;} /&gt;
+</code></pre>
+<hr>
+<h3><strong>Advanced Questions</strong></h3>
+<h4><strong>13. How do you handle route protection?</strong></h4>
+<p><strong>Answer:</strong><br>
+Wrap protected routes in an authentication check:</p>
+<pre><code class="language-jsx">function PrivateRoute({ children }) {
+  const isAuthenticated = localStorage.getItem(&quot;token&quot;); // Example check
+  return isAuthenticated ? children : &lt;Navigate to=&quot;/login&quot; /&gt;;
+}
+
+&lt;Route path=&quot;/dashboard&quot; element={&lt;PrivateRoute&gt;&lt;Dashboard /&gt;&lt;/PrivateRoute&gt;} /&gt;
+</code></pre>
+<hr>
+<h4><strong>14. What is lazy loading in React Router?</strong></h4>
+<p><strong>Answer:</strong><br>
+Lazy loading optimizes performance by loading components only when needed.</p>
+<pre><code class="language-jsx">import { lazy, Suspense } from &quot;react&quot;;
+
+const About = lazy(() =&gt; import(&quot;./About&quot;));
+
+&lt;Route path=&quot;/about&quot; element={
+  &lt;Suspense fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;
+    &lt;About /&gt;
+  &lt;/Suspense&gt;
+} /&gt;
+</code></pre>
+<hr>
+<h4><strong>15. What are the differences in React Router v6 vs. older versions?</strong></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong>No more <code>Switch</code></strong>, replaced with <code>Routes</code>.</li>
+<li><strong><code>useNavigate</code> replaces <code>useHistory</code></strong>.</li>
+<li><strong>Routes require an <code>element</code> prop</strong> (not <code>component</code>).</li>
+<li><strong>Relative routing is improved</strong>.</li>
+</ul>
+<hr>
+<h4><strong>16. How can you pass state between routes?</strong></h4>
+<p><strong>Answer:</strong><br>
+Use the <code>state</code> prop in <code>navigate</code>:</p>
+<pre><code class="language-jsx">navigate(&quot;/details&quot;, { state: { userId: 5 } });
+</code></pre>
+<p>Retrieve it in the target component:</p>
+<pre><code class="language-jsx">const location = useLocation();
+console.log(location.state.userId);
+</code></pre>
+<hr>
+<h4><strong>17. How do you persist navigation state across refreshes?</strong></h4>
+<p><strong>Answer:</strong><br>
+Store data in <strong>localStorage</strong> or <strong>Redux</strong>.</p>
+<pre><code class="language-js">localStorage.setItem(&quot;user&quot;, JSON.stringify(userData));
+const user = JSON.parse(localStorage.getItem(&quot;user&quot;));
+</code></pre>
+<hr>
+<h4><strong>18. What is the difference between <code>Outlet</code> and Layout routes?</strong></h4>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><strong><code>Outlet</code></strong> is used to render child components in nested routes.</li>
+<li><strong>Layout Routes</strong> allow shared layouts.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-jsx">function Layout() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Header&lt;/h1&gt;
+      &lt;Outlet /&gt;
+      &lt;h2&gt;Footer&lt;/h2&gt;
+    &lt;/div&gt;
+  );
+}
+
+&lt;Route path=&quot;/&quot; element={&lt;Layout /&gt;}&gt;
+  &lt;Route path=&quot;home&quot; element={&lt;Home /&gt;} /&gt;
+&lt;/Route&gt;
+</code></pre>
+<hr>
+<h4><strong>19. How can you implement scroll restoration when navigating?</strong></h4>
+<p><strong>Answer:</strong><br>
+Use <code>useEffect</code> to scroll to the top:</p>
+<pre><code class="language-jsx">import { useEffect } from &quot;react&quot;;
+import { useLocation } from &quot;react-router-dom&quot;;
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() =&gt; window.scrollTo(0, 0), [pathname]);
+  return null;
+}
+</code></pre>
+<p>Use it inside <code>BrowserRouter</code>:</p>
+<pre><code class="language-jsx">&lt;BrowserRouter&gt;
+  &lt;ScrollToTop /&gt;
+  &lt;Routes&gt;{/* Routes here */}&lt;/Routes&gt;
+&lt;/BrowserRouter&gt;
+</code></pre>
+<hr>
+<h4><strong>20. How do you handle query parameters?</strong></h4>
+<p><strong>Answer:</strong><br>
+Use <code>useSearchParams</code>:</p>
+<pre><code class="language-jsx">const [searchParams] = useSearchParams();
+console.log(searchParams.get(&quot;id&quot;));
+</code></pre>
+<hr>
+<p>These questions should help you <strong>prepare well for a React Router interview</strong>. Let me know if you need more explanations!</p>
+
+                </article>
+                <aside class="flex-1 p-6">
+                    <div class="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:col-start-4 xl:divide-y-0">
+                        <ul>
+                            <li class="pb-4">
+                                <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">Tags</h3>
+                                <div class="flex flex-wrap flex-row">
+                                <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/featured">featured</a> <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/frontend">frontend</a> <a class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400" href="/tags/react">react</a>
+                                </div>
+                            </li>
+                            <li class="pb-4">
+                                <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">Share</h3>
+                                <div class="flex flex-wrap flex-row">
+                                    <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https://dhruvangg.github.io/posts/react-router-interview-guide/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                                            <path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
+                                        </svg>
+                                        </a>
+                                    <a target="_blank" href="https://wa.me/?text=React Router Interview Guide: 20 Must-Know Questions & Answers!%20https://dhruvangg.github.io/posts/react-router-interview-guide/" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                                            <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+                                    <a target="_blank" href="https://twitter.com/intent/tweet?url=https://dhruvangg.github.io/posts/react-router-interview-guide/&text=React Router Interview Guide: 20 Must-Know Questions & Answers" class="capitalize mr-3 mb-3 text-sm font-medium decoration-none uppercase text-indigo-500 hover:text-primary-600 dark:hover:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                                            <path fill="#212121" fill-rule="evenodd" d="M38,42H10c-2.209,0-4-1.791-4-4V10c0-2.209,1.791-4,4-4h28	c2.209,0,4,1.791,4,4v28C42,40.209,40.209,42,38,42z" clip-rule="evenodd"></path><path fill="#fff" d="M34.257,34h-6.437L13.829,14h6.437L34.257,34z M28.587,32.304h2.563L19.499,15.696h-2.563 L28.587,32.304z"></path><polygon fill="#fff" points="15.866,34 23.069,25.656 22.127,24.407 13.823,34"></polygon><polygon fill="#fff" points="24.45,21.721 25.355,23.01 33.136,14 31.136,14"></polygon>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                     
+                </aside>
+                </section>
+                </div>
+            </main>
+            
+            <footer>
+                <div class="mt-16 flex flex-col items-center">
+                    <div class="mb-3 flex space-x-4">
+                        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="mailto:dhruvangg@gmail.com">
+                            <span class="sr-only">mail</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-6 w-6">
+                                <title>Mail</title>
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                        </a>
+                        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvangg/">
+                            <span class="sr-only">github</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-6 w-6">
+                                <title>GitHub</title>
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                            </svg>
+                        </a>
+                        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dhruvangg/">
+                            <span class="sr-only">linkedin</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-6 w-6">
+                                <title>Linkedin</title>
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                        <div>Dhruvang Gajjar</div>
+                        <div>•</div>
+                        <div>© 2025</div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </body>
+    </html>
+    
