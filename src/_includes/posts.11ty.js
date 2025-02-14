@@ -25,12 +25,12 @@ const Layout = (data) => {
         <meta property="og:description" content="${data.description}" />
         <meta property="og:type" content="article">
         <meta property="og:url" content="${data.meta.url + data.page.url}" />
-        <meta property="og:image" content="${data.meta.url + data.featuredImage || data.meta.image}" />
+        <meta property="og:image" content="${data.featuredImage ? data.meta.url + data.featuredImage : data.meta.image}" />
 
         <meta property="twitter:title" content="${data.title}" />
         <meta property="twitter:description" content="${data.description}" />
         <meta property="twitter:url" content="${data.meta.url + data.page.url}" />
-        <meta property="twitter:image" content="${data.meta.url + data.featuredImage || data.meta.image}" />
+        <meta property="twitter:image" content="${data.featuredImage ? data.meta.url + data.featuredImage : data.meta.imagec   }" />
         <meta property="twitter:card" content="summary_large_image" />
 
         <link rel="icon" type="image/x-icon" href="/favicon.ico">  
