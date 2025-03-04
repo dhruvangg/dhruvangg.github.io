@@ -3,7 +3,7 @@ tags:
     - Content security
     - web development
 title: "Securing Your Website Assets: Preventing Unauthorized Direct Access 🚀🔒"
-date: "2025-02-04T10:00:00.1Z"
+date: "2025-03-04T10:00:00.1Z"
 description: "To prevent direct access to assets via URL on your website, there are multiple approaches depending on setup."
 layout: "posts.11ty.js"
 ---
