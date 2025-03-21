@@ -3,8 +3,8 @@ tags:
     - featured
     - frontend
     - javascript
-title: "Getting Started with Cloudflare Workers Using JavaScript"
-date: "2025-01-28"
+title: "Rspack: The Next-Gen JavaScript Bundler"
+date: "2025-03-21"
 description: "Rspack is a high-performance JavaScript bundler written in Rust. It is inspired by Webpack but significantly optimizes build speeds by leveraging Rust’s concurrency and memory safety features."
 layout: "posts.11ty.js"
 ---
