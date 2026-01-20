@@ -4,22 +4,21 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/images");
     eleventyConfig.addPassthroughCopy("src/robots.txt");
+    eleventyConfig.addPassthroughCopy("src/admin");
 
     eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-			return false;
-		}
-	});
-    
+        if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+            return false;
+        }
+    });
+
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        extensions: "html",
         formats: ["avif", "webp", "jpeg"],
         widths: ["auto"],
-        htmlOptions: {
-            imgAttributes: {
-                loading: "lazy",
-                decoding: "async",
-            },
-            pictureAttributes: {}
+        defaultAttributes: {
+            loading: "lazy",
+            decoding: "async",
         },
     });
 

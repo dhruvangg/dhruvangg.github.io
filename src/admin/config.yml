@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: dhruvangg/dhruvangg.github.io
+  branch: master
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "posts.11ty.js"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: []
+        hint: "Click 'Add tags' button to create a new tag entry."
+        field: {label: "Tag", name: "tag", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
