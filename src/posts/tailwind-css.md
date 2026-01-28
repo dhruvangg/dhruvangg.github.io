@@ -1,6 +1,5 @@
 ---
 tags: 
-    - featured
     - frontend
     - tailwindcss
     - css
