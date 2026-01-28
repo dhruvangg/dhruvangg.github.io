@@ -3,7 +3,9 @@ layout: posts.11ty.js
 title: "Day 1: What AWS Lambda Actually Is (and Isn't)"
 date: 2026-01-28T19:43:00.000+05:30
 description: Why Lambda is not an Express endpoint
-tags: []
+tags:    
+    - featured
+    - aws lambda
 ---
 
 ## The Core Mental Shift
