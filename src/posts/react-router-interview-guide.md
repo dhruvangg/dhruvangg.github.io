@@ -1,6 +1,5 @@
 ---
 tags: 
-    - featured
     - frontend
     - react
 title: "React Router Interview Guide: 20 Must-Know Questions & Answers"
