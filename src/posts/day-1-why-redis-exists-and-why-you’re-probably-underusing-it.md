@@ -2,6 +2,7 @@
 layout: posts.11ty.js
 title: "Day 1: Why Redis Exists (and Why You’re Probably Underusing It)"
 date: 2026-01-20T20:02:00.000+05:30
+featuredImage: "/images/uploads/redis-performance.png"
 description: Most performance issues I’ve seen in JavaScript apps weren’t caused
   by React, Node or bad code. There were caused by **waiting on the database**
   That’s the gap Redis was built to fill.
@@ -35,7 +36,7 @@ Just
 > It’s fast not because it’s cleaver, because it does less.
 > 
 
-![image.png](src/images/uploads/redis-performance.png)
+![image.png](/images/uploads/redis-performance.png)
 
 ## Why Redis fits JavaScript well
 
@@ -178,7 +179,7 @@ Now:
 - Any server can know who is online
 - Any server can notify others instantly
 
-![image.png](src/images/uploads/redis-in-chat.png)
+![image.png](/images/uploads/redis-in-chat.png)
 
 ---
 
