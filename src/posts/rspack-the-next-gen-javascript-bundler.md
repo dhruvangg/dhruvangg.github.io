@@ -1,6 +1,5 @@
 ---
 tags: 
-    - featured
     - frontend
     - javascript
 title: "Rspack: The Next-Gen JavaScript Bundler"
